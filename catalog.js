@@ -12,7 +12,7 @@ const products = [
     "image": "75021_prod.jpg",
     "meta": "Set 75021",
     "description": "Komplett mit Anleitung und Originalverpackung (OVP).",
-    "tag": "Dein Testprodukt",
+    "tag": "",
     "example": false
   },
   {
