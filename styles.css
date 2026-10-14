@@ -4,3 +4,6 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 
 .arrow-icon{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.7;vertical-align:middle}.contact-icon .arrow-icon{width:60px;height:60px}.art-bottom .arrow-icon{width:12px;height:12px}.values .arrow-icon{width:14px;height:14px}.story-symbol svg{width:100%;max-width:230px;height:auto}@media(max-width:700px){.story-symbol svg{max-width:110px}}.checkout:disabled{opacity:.5;cursor:default}
+
+/* Display the supplied square logo without its large outer white margins. */
+.logo{position:relative;display:block;width:180px;aspect-ratio:790 / 290;overflow:hidden;flex-shrink:0;mix-blend-mode:multiply}.logo .brand-image{position:absolute;width:129.62%;height:auto;max-width:none;left:-14.68%;top:-117.59%}footer .logo{width:150px}@media(max-width:700px){.header .logo{width:155px}footer .logo{width:135px}}
