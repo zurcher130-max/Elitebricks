@@ -31,3 +31,7 @@ Die Produkte, Stückzahlen und Preise sind Beispiele. Die Illustrationen sind Sy
 ## Sortiment-Seiten
 
 Alle Sortiment-Seiten bieten Suche nach Name oder Artikelkennung, kombinierbare Kategorie-, Merkmals- und Preisfilter, Sortierung nach Preis oder Name, Ergebnisanzahl und Filter-Zurücksetzen. Sets: Themenwelt und Teileanzahl. Minifiguren: Themenwelt und Zubehör. Einzelteile: Teiletyp und Farbe. Der Warenkorb bleibt beim Seitenwechsel erhalten. Alle 18 Produkte und Illustrationen sind Beispiele, keine echten Angebote.
+
+## Themenwelten
+
+Sets und Minifiguren verwenden die vollständige Themenwelt-Auswahl. LEGO Movie 1/2 sowie Lord of the Rings/Hobbit sind separat auswählbar. Die generischen Beispielprodukte sind unter `Sonstige` eingeordnet; es werden keine offiziellen Markenprodukte vorgetäuscht. Bei echten Produkten das Feld `theme` in `catalog.js` setzen (z. B. `star-wars`, `ninjago`, `harry-potter`, `city`). Die bisherigen Kategorien bleiben für die Startseite erhalten.

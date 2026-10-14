@@ -1,4 +1,5 @@
 // Shared example catalog. Replace with real product data before selling.
+// Generic demo products belong to Sonstige; set theme to a filter key for real products.
 const products = [
   {
     "id": "city",
@@ -10,7 +11,8 @@ const products = [
     "detail": "medium",
     "image": "brick-cream.svg",
     "meta": "864 Teile",
-    "tag": "Neue Perspektiven"
+    "tag": "Neue Perspektiven",
+    "theme": "sonstige"
   },
   {
     "id": "road",
@@ -22,7 +24,8 @@ const products = [
     "detail": "medium",
     "image": "brick-blue.svg",
     "meta": "512 Teile",
-    "tag": "Für Entdecker"
+    "tag": "Für Entdecker",
+    "theme": "sonstige"
   },
   {
     "id": "ideas",
@@ -34,7 +37,8 @@ const products = [
     "detail": "medium",
     "image": "brick-orange.svg",
     "meta": "1.000 Teile",
-    "tag": "Freie Fantasie"
+    "tag": "Freie Fantasie",
+    "theme": "sonstige"
   },
   {
     "id": "townhouse",
@@ -46,7 +50,8 @@ const products = [
     "detail": "large",
     "image": "brick-cream.svg",
     "meta": "1.480 Teile",
-    "tag": "Zum Entdecken"
+    "tag": "Zum Entdecken",
+    "theme": "sonstige"
   },
   {
     "id": "racer",
@@ -58,7 +63,8 @@ const products = [
     "detail": "small",
     "image": "brick-blue.svg",
     "meta": "280 Teile",
-    "tag": "Zum Entdecken"
+    "tag": "Zum Entdecken",
+    "theme": "sonstige"
   },
   {
     "id": "starter",
@@ -70,7 +76,8 @@ const products = [
     "detail": "small",
     "image": "brick-orange.svg",
     "meta": "400 Teile",
-    "tag": "Zum Entdecken"
+    "tag": "Zum Entdecken",
+    "theme": "sonstige"
   },
   {
     "id": "builder",
@@ -82,7 +89,8 @@ const products = [
     "detail": "accessory",
     "image": "minifigure.svg",
     "meta": "Mit Zubehör",
-    "tag": "Zum Entdecken"
+    "tag": "Zum Entdecken",
+    "theme": "sonstige"
   },
   {
     "id": "barista",
@@ -94,7 +102,8 @@ const products = [
     "detail": "basic",
     "image": "minifigure.svg",
     "meta": "Ohne Zubehör",
-    "tag": "Zum Entdecken"
+    "tag": "Zum Entdecken",
+    "theme": "sonstige"
   },
   {
     "id": "explorer",
@@ -106,7 +115,8 @@ const products = [
     "detail": "accessory",
     "image": "minifigure.svg",
     "meta": "Mit Zubehör",
-    "tag": "Zum Entdecken"
+    "tag": "Zum Entdecken",
+    "theme": "sonstige"
   },
   {
     "id": "knight",
@@ -118,7 +128,8 @@ const products = [
     "detail": "accessory",
     "image": "minifigure.svg",
     "meta": "Mit Zubehör",
-    "tag": "Zum Entdecken"
+    "tag": "Zum Entdecken",
+    "theme": "sonstige"
   },
   {
     "id": "astronaut",
@@ -130,7 +141,8 @@ const products = [
     "detail": "accessory",
     "image": "minifigure.svg",
     "meta": "Mit Zubehör",
-    "tag": "Zum Entdecken"
+    "tag": "Zum Entdecken",
+    "theme": "sonstige"
   },
   {
     "id": "pilot",
@@ -142,7 +154,8 @@ const products = [
     "detail": "basic",
     "image": "minifigure.svg",
     "meta": "Ohne Zubehör",
-    "tag": "Zum Entdecken"
+    "tag": "Zum Entdecken",
+    "theme": "sonstige"
   },
   {
     "id": "brick-black",

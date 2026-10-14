@@ -12,7 +12,7 @@ function renderProducts() {
     const category = form.elements.category.value;
     const detail = form.elements.detail.value;
     const price = form.elements.price.value;
-    visible = visible.filter(p => (!query || `${p.name} ${p.id} ${p.label} ${p.meta}`.toLocaleLowerCase('de').includes(query)) && (category === 'all' || p.category === category) && (detail === 'all' || p.detail === detail) && (price === 'all' || (price === 'under10' && p.price <= 10) || (price === '10to50' && p.price > 10 && p.price <= 50) || (price === 'over50' && p.price > 50)));
+    visible = visible.filter(p => (!query || `${p.name} ${p.id} ${p.label} ${p.meta}`.toLocaleLowerCase('de').includes(query)) && (category === 'all' || (shop === 'einzelteile' ? p.category : p.theme) === category) && (detail === 'all' || p.detail === detail) && (price === 'all' || (price === 'under10' && p.price <= 10) || (price === '10to50' && p.price > 10 && p.price <= 50) || (price === 'over50' && p.price > 50)));
     const sort = document.querySelector('#sort').value;
     if (sort === 'price-asc') visible.sort((a,b) => a.price - b.price);
     if (sort === 'price-desc') visible.sort((a,b) => b.price - a.price);
