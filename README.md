@@ -13,7 +13,7 @@ Keine Paketinstallation erforderlich. Optionale Google Fonts fallen ohne Netzwer
 
 ## Aktueller Inventarstand
 
-17 Sets aus dem hochgeladenen BrickLink-Export, jeweils 1 Stück, alle Preise in CHF. Keine Minifiguren oder Einzelteile im Export. Die früheren Beispielangebote wurden entfernt. Das Republic Gunship nutzt das hochgeladene Foto. Die übrigen Sets verwenden lokal gespeicherte offizielle LEGO-Katalogbilder von den Bauanleitungsseiten. Diese zeigen das ursprüngliche Set; der Zustand des angebotenen Exemplars steht in der Beschreibung.
+17 Sets (je 1 Stück) und 56 Minifiguren-Angebote mit insgesamt 70 Figuren aus den hochgeladenen BrickLink-Exporten, alle Preise in CHF. Keine Einzelteile im Export. Die früheren Beispielangebote wurden entfernt. Das Republic Gunship nutzt das hochgeladene Foto. Die übrigen Sets verwenden lokal gespeicherte offizielle LEGO-Katalogbilder von den Bauanleitungsseiten. Diese zeigen das ursprüngliche Set; der Zustand des angebotenen Exemplars steht in der Beschreibung.
 
 Preise, Mengen, Zustand und Originalbeschreibungen stammen aus dem XML. Englische Produktnamen und deutsche Beschreibungen werden im Importer ergänzt und können dort überprüft/angepasst werden. Hinweise auf fehlende Aufdrucke oder gerissene Oberkörper bleiben sichtbar. Der Export enthält keine Teileanzahlen; Sets werden daher nach Zustand statt Teileanzahl gefiltert.
 
@@ -25,7 +25,7 @@ node --check catalog.js
 node --check app.js
 ```
 
-Der Import ersetzt den gesamten Katalog, führt keine Netzwerkabfragen durch und setzt keine Synchronisierung mit BrickLink voraus. Nicht unterstützte Artikeltypen, Währungen, Rabatt-/Bulk-Preise und ungültige Daten führen zum Abbruch, bevor der Katalog überschrieben wird. Artikel ohne Bestand werden ausgelassen. Unbekannte Artikel erscheinen unter ihrer Artikelnummer und „Sonstige“; Namen, Themenwelten und Übersetzungen können in `tools/import_inventory.py` ergänzt werden. Die Mengen begrenzen den Demo-Warenkorb; Verkäufe außerhalb der Website werden erst nach neuem Import berücksichtigt.
+Der XML-Import ersetzt die enthaltenen Kategorien und behält andere Kategorien bei, führt keine Netzwerkabfragen durch und setzt keine Synchronisierung mit BrickLink voraus. Nicht unterstützte Artikeltypen, Währungen, Rabatt-/Bulk-Preise und ungültige Daten führen zum Abbruch, bevor der Katalog überschrieben wird. Artikel ohne Bestand werden ausgelassen. Unbekannte Artikel erscheinen unter ihrer Artikelnummer und „Sonstige“; Namen, Themenwelten und Übersetzungen können in `tools/import_inventory.py` ergänzt werden. Die Mengen begrenzen den Demo-Warenkorb; Verkäufe außerhalb der Website werden erst nach neuem Import berücksichtigt.
 
 ## Dateien
 
@@ -44,3 +44,11 @@ Der Checkout führt keine Bestellungen oder Zahlungen aus. Kontaktinformationen,
 ## Bildquellen
 
 `assets/lego/catalog-images.json` dokumentiert für jedes übernommene Katalogbild die offizielle LEGO-Seite und Bild-URL. Die Dateien werden lokal ausgeliefert und beim erneuten Inventarimport automatisch wieder zugeordnet. Das ursprüngliche Gunship-Foto bleibt unverändert.
+
+## Figuren aktualisieren
+
+```sh
+python3 tools/import_minifigures.py /pfad/zum/invcsv.csv
+```
+
+Der CSV-Import ersetzt nur die Minifiguren und bewahrt die Sets samt Bildern. Artikelnummern, Preise, Stückzahlen und Originalbeschreibungen bleiben pro BrickLink-Lot erhalten; gleiche Figuren in unterschiedlichen Lots werden nicht zusammengefasst. Neu/Gebraucht ist der zusätzliche Figurenfilter, weil der CSV keine verlässlichen Zubehörfelder enthält. Fehlende Bilder erscheinen als Artikelnummer mit „Produktbild folgt“. LEGO-Suche und Bauanleitungsseiten liefern keine eindeutig zugeordneten Bilder für die BrickLink-Figurenkennungen.

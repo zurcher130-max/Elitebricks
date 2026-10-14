@@ -82,5 +82,12 @@ if __name__ == '__main__':
  parser.add_argument('--output',type=Path,default=ROOT/'catalog.js')
  args=parser.parse_args()
  products=import_inventory(args.inventory)
+ # A set-only refresh must not discard the separately uploaded minifigure inventory.
+ current_catalog = ROOT / 'catalog.js'
+ if current_catalog.is_file():
+  current_text = current_catalog.read_text()
+  current = json.loads(current_text[current_text.index('['):].strip().rstrip(';'))
+  refreshed_shops = {p['shop'] for p in products}
+  products += [p for p in current if p['shop'] not in refreshed_shops]
  args.output.write_text('// Imported BrickLink inventory snapshot. Prices are CHF; no live synchronization.\nconst products = '+json.dumps(products,ensure_ascii=False,indent=2)+';\n',encoding='utf-8')
  print(f'Imported {len(products)} lots, {sum(p["quantity"] for p in products)} units to {args.output}')
