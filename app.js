@@ -25,7 +25,6 @@ function renderProducts() {
 if (form) {
   form.addEventListener('submit', e => e.preventDefault());
   form.addEventListener('input', renderProducts);
-  form.addEventListener('change', renderProducts);
   form.addEventListener('reset', () => {document.querySelector('#sort').value = 'featured'; setTimeout(renderProducts, 0);});
   document.querySelector('#sort').addEventListener('change', renderProducts);
   document.querySelector('#reset-empty').addEventListener('click', () => form.reset());

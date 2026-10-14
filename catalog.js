@@ -9,7 +9,7 @@ const products = [
     "theme": "star-wars",
     "price": 320,
     "detail": "large",
-    "image": null,
+    "image": "75021_prod.jpg",
     "meta": "Set 75021",
     "description": "Komplett mit Anleitung und Originalverpackung (OVP).",
     "tag": "Dein Testprodukt",
