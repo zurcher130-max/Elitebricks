@@ -13,7 +13,7 @@ Keine Paketinstallation erforderlich. Optionale Google Fonts fallen ohne Netzwer
 
 ## Aktueller Inventarstand
 
-17 Sets aus dem hochgeladenen BrickLink-Export, jeweils 1 Stück, alle Preise in CHF. Keine Minifiguren oder Einzelteile im Export. Die früheren Beispielangebote wurden entfernt. Das Republic Gunship nutzt das hochgeladene Foto; die übrigen Bildfelder des Exports waren leer. Setnummern und „Produktbild folgt“ ersetzen fehlende Bilder.
+17 Sets aus dem hochgeladenen BrickLink-Export, jeweils 1 Stück, alle Preise in CHF. Keine Minifiguren oder Einzelteile im Export. Die früheren Beispielangebote wurden entfernt. Das Republic Gunship nutzt das hochgeladene Foto. Die übrigen Sets verwenden lokal gespeicherte offizielle LEGO-Katalogbilder von den Bauanleitungsseiten. Diese zeigen das ursprüngliche Set; der Zustand des angebotenen Exemplars steht in der Beschreibung.
 
 Preise, Mengen, Zustand und Originalbeschreibungen stammen aus dem XML. Englische Produktnamen und deutsche Beschreibungen werden im Importer ergänzt und können dort überprüft/angepasst werden. Hinweise auf fehlende Aufdrucke oder gerissene Oberkörper bleiben sichtbar. Der Export enthält keine Teileanzahlen; Sets werden daher nach Zustand statt Teileanzahl gefiltert.
 
@@ -39,4 +39,8 @@ Der Import ersetzt den gesamten Katalog, führt keine Netzwerkabfragen durch und
 
 ## Vor dem Shop-Start
 
-Der Checkout führt keine Bestellungen oder Zahlungen aus. Kontaktinformationen, rechtliche Angaben und eine echte Shop-/Zahlungsanbindung müssen ergänzt werden. Der Bestand ist eine Momentaufnahme und wird nicht automatisch mit BrickLink abgeglichen. Fehlende Produktbilder müssen ergänzt werden.
+Der Checkout führt keine Bestellungen oder Zahlungen aus. Kontaktinformationen, rechtliche Angaben und eine echte Shop-/Zahlungsanbindung müssen ergänzt werden. Der Bestand ist eine Momentaufnahme und wird nicht automatisch mit BrickLink abgeglichen. Eigene Zustandsfotos können die Katalogbilder ergänzen.
+
+## Bildquellen
+
+`assets/lego/catalog-images.json` dokumentiert für jedes übernommene Katalogbild die offizielle LEGO-Seite und Bild-URL. Die Dateien werden lokal ausgeliefert und beim erneuten Inventarimport automatisch wieder zugeordnet. Das ursprüngliche Gunship-Foto bleibt unverändert.

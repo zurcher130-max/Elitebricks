@@ -1,0 +1,146 @@
+{
+  "8038-1": {
+    "image": "lego/8038.jpg",
+    "source": "https://www.lego.com/cdn/product-assets/product.img.pri/8038_prod.jpg?fit=bounds&quality=85&width=1000&height=800",
+    "page": "https://www.lego.com/de-ch/service/buildinginstructions/8038",
+    "name": "The Battle of Endor",
+    "pieces": 890,
+    "width": 500,
+    "height": 345
+  },
+  "7964-1": {
+    "image": "lego/7964.jpg",
+    "source": "https://www.lego.com/cdn/product-assets/product.img.pri/7964_prod.jpg?fit=bounds&quality=85&width=1000&height=800",
+    "page": "https://www.lego.com/de-ch/service/buildinginstructions/7964",
+    "name": "Republic Frigate",
+    "pieces": 1022,
+    "width": 500,
+    "height": 323
+  },
+  "9488-1": {
+    "image": "lego/9488.jpg",
+    "source": "https://www.lego.com/cdn/product-assets/product.img.pri/9488_prod.jpg?fit=bounds&quality=85&width=1000&height=800",
+    "page": "https://www.lego.com/de-ch/service/buildinginstructions/9488",
+    "name": "Elite Clone Trooper & Commando Droid Battle Pack",
+    "pieces": 98,
+    "width": 500,
+    "height": 423
+  },
+  "9489-1": {
+    "image": "lego/9489.jpg",
+    "source": "https://www.lego.com/cdn/product-assets/product.img.pri/9489_prod.jpg?fit=bounds&quality=85&width=1000&height=800",
+    "page": "https://www.lego.com/de-ch/service/buildinginstructions/9489",
+    "name": "Endor Rebel Trooper & Imperial Trooper Battle Pack",
+    "pieces": 77,
+    "width": 500,
+    "height": 398
+  },
+  "8088-1": {
+    "image": "lego/8088.jpg",
+    "source": "https://www.lego.com/cdn/product-assets/product.img.pri/8088-0000-xx-12-1.jpg?fit=bounds&quality=85&width=1000&height=800",
+    "page": "https://www.lego.com/de-ch/service/buildinginstructions/8088",
+    "name": "ARC-170 Starfighter",
+    "pieces": 396,
+    "width": 420,
+    "height": 236
+  },
+  "2506-1": {
+    "image": "lego/2506.jpg",
+    "source": "https://www.lego.com/cdn/product-assets/product.img.pri/2506_prod.jpg?fit=bounds&quality=85&width=1000&height=800",
+    "page": "https://www.lego.com/de-ch/service/buildinginstructions/2506",
+    "name": "Skull Truck",
+    "pieces": 515,
+    "width": 500,
+    "height": 372
+  },
+  "9449-1": {
+    "image": "lego/9449.jpg",
+    "source": "https://www.lego.com/cdn/product-assets/product.img.pri/9449_Prod.jpg?fit=bounds&quality=85&width=1000&height=800",
+    "page": "https://www.lego.com/de-ch/service/buildinginstructions/9449",
+    "name": "Ultra Sonic Raider",
+    "pieces": 622,
+    "width": 500,
+    "height": 383
+  },
+  "70165-1": {
+    "image": "lego/70165.png",
+    "source": "https://www.lego.com/cdn/product-assets/product.img.pri/70165_prod.png?fit=bounds&quality=85&width=1000&height=800",
+    "page": "https://www.lego.com/de-ch/service/buildinginstructions/70165",
+    "name": "Ultra Agents Mission HQ",
+    "pieces": 1060,
+    "width": 500,
+    "height": 375
+  },
+  "75058-1": {
+    "image": "lego/75058.jpg",
+    "source": "https://www.lego.com/cdn/product-assets/product.img.pri/75058_prod.jpg?fit=bounds&quality=85&width=1000&height=800",
+    "page": "https://www.lego.com/de-ch/service/buildinginstructions/75058",
+    "name": "MTT",
+    "pieces": 954,
+    "width": 500,
+    "height": 321
+  },
+  "70732-1": {
+    "image": "lego/70732.jpg",
+    "source": "https://www.lego.com/cdn/product-assets/product.img.pri/70732_prod.jpg?fit=bounds&quality=85&width=1000&height=800",
+    "page": "https://www.lego.com/de-ch/service/buildinginstructions/70732",
+    "name": "City of Stiix",
+    "pieces": 1069,
+    "width": 500,
+    "height": 392
+  },
+  "70596-1": {
+    "image": "lego/70596.jpg",
+    "source": "https://www.lego.com/cdn/product-assets/product.img.pri/70596_Prod.jpg?fit=bounds&quality=85&width=1000&height=800",
+    "page": "https://www.lego.com/de-ch/service/buildinginstructions/70596",
+    "name": "Samurai X Cave Chaos",
+    "pieces": 1253,
+    "width": 500,
+    "height": 240
+  },
+  "75141-1": {
+    "image": "lego/75141.jpg",
+    "source": "https://www.lego.com/cdn/product-assets/product.img.pri/75141_Prod.jpg?fit=bounds&quality=85&width=1000&height=800",
+    "page": "https://www.lego.com/de-ch/service/buildinginstructions/75141",
+    "name": "Kanan's Speeder Bike",
+    "pieces": 234,
+    "width": 500,
+    "height": 212
+  },
+  "75206-1": {
+    "image": "lego/75206.jpg",
+    "source": "https://www.lego.com/cdn/product-assets/product.img.pri/75206_Prod.jpg?fit=bounds&quality=85&width=1000&height=800",
+    "page": "https://www.lego.com/de-ch/service/buildinginstructions/75206",
+    "name": "Jedi and Clone Troopers Battle Pack",
+    "pieces": 102,
+    "width": 500,
+    "height": 363
+  },
+  "75810-1": {
+    "image": "lego/75810.jpg",
+    "source": "https://www.lego.com/cdn/product-assets/product.img.pri/75810_Prod.jpg?fit=bounds&quality=85&width=1000&height=800",
+    "page": "https://www.lego.com/de-ch/service/buildinginstructions/75810",
+    "name": "The Upside Down",
+    "pieces": 2287,
+    "width": 500,
+    "height": 464
+  },
+  "9491-1": {
+    "image": "lego/9491.jpg",
+    "source": "https://www.lego.com/cdn/product-assets/product.img.pri/9491_prod.jpg?fit=bounds&quality=85&width=1000&height=800",
+    "page": "https://www.lego.com/de-ch/service/buildinginstructions/9491",
+    "name": "Geonosian Cannon",
+    "pieces": 132,
+    "width": 500,
+    "height": 359
+  },
+  "9470-1": {
+    "image": "lego/9470.jpg",
+    "source": "https://www.lego.com/cdn/product-assets/product.img.pri/9470_prod.jpg?fit=bounds&quality=85&width=1000&height=800",
+    "page": "https://www.lego.com/de-ch/service/buildinginstructions/9470",
+    "name": "Shelob Attacks",
+    "pieces": 227,
+    "width": 500,
+    "height": 286
+  }
+}

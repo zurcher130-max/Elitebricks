@@ -33,6 +33,8 @@ def import_inventory(path):
  if root.tag != 'INVENTORY':
   raise ValueError('Expected INVENTORY XML root')
  products = []
+ image_manifest = ROOT / 'assets/lego/catalog-images.json'
+ official_images = json.loads(image_manifest.read_text()) if image_manifest.is_file() else {}
  seen = set()
  types = {'S':'sets', 'M':'minifiguren', 'P':'einzelteile'}
  for item in root.findall('ITEM'):
@@ -58,13 +60,18 @@ def import_inventory(path):
    raise ValueError('Unknown condition')
   name, theme, label, description = METADATA.get(item_id, (f"Artikel {item_id}", 'sonstige', 'Sonstige', get('DESCRIPTION')))
   image = '75021_prod.jpg' if item_id == '75021-1' and (ROOT/'assets/75021_prod.jpg').is_file() else None
+  official = official_images.get(item_id)
+  if official and (ROOT / 'assets' / official['image']).is_file():
+   image = official['image']
+   name = official['name']
   # Preserve the existing Gunship cart ID when replacing its test listing.
   product_id = '75021' if item_id == '75021-1' else f'bl-{lot_id}'
   products.append(dict(id=product_id, name=f'{name} ({item_id.split("-")[0]})', shop=types[get('ITEMTYPE')], category=theme,
    theme=theme, label=label, price=float(price), detail=condition, image=image, meta=f'Set {item_id.split("-")[0]}' if get('ITEMTYPE')=='S' else f'Artikel {item_id}',
    description=description, tag='', example=False, quantity=quantity, condition=condition,
    subcondition=get('SUBCONDITION'), itemNumber=item_id, lotId=lot_id,
-   sourceDescription=get('DESCRIPTION'), source='BrickLink inventory export'))
+   sourceDescription=get('DESCRIPTION'), source='BrickLink inventory export',
+   imageKind='official-catalog' if official and image == official['image'] else 'uploaded' if image else None))
  if not products:
   raise ValueError('Inventory contains no active items; refusing empty catalog replacement')
  return products

@@ -23,3 +23,5 @@ nav a[aria-current="page"]{text-decoration:underline;text-underline-offset:7px;f
 .product-image.product-photo{background:#fff;border:0;border-radius:0}.product-image.product-photo img.real-product-image{padding:0;width:100%;max-height:none;height:100%;object-fit:contain}
 
 .product-stock{font-size:11px;color:#555;line-height:1.6;margin:0 0 16px}.add-button:disabled{opacity:.35;cursor:default;background:transparent;color:var(--ink)}.image-pending>span{font-size:36px}.inventory-status{font-size:13px;line-height:1.7;background:#f4f4f4;padding:16px;border-radius:6px}.inventory-status[hidden]{display:none}
+
+.image-credit{font-size:10px;color:#777;margin:8px 0 0}.image-credit+.product-meta{margin-top:10px}

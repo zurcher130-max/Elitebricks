@@ -9,7 +9,7 @@ const products = [
     "label": "Star Wars",
     "price": 280.0,
     "detail": "new",
-    "image": null,
+    "image": "lego/8038.jpg",
     "meta": "Set 8038",
     "description": "Alle Beutel außer Beutel 1 versiegelt. Mit Anleitung; Figuren neuwertig.",
     "tag": "",
@@ -20,7 +20,8 @@ const products = [
     "itemNumber": "8038-1",
     "lotId": "552380026",
     "sourceDescription": "all bags sealed except for bag nr.1, with instructions, figures as new",
-    "source": "BrickLink inventory export"
+    "source": "BrickLink inventory export",
+    "imageKind": "official-catalog"
   },
   {
     "id": "bl-537835096",
@@ -31,7 +32,7 @@ const products = [
     "label": "Star Wars",
     "price": 190.0,
     "detail": "used",
-    "image": null,
+    "image": "lego/8088.jpg",
     "meta": "Set 8088",
     "description": "Komplett mit Anleitung und Originalverpackung.",
     "tag": "",
@@ -42,7 +43,8 @@ const products = [
     "itemNumber": "8088-1",
     "lotId": "537835096",
     "sourceDescription": "complete with instructions and box",
-    "source": "BrickLink inventory export"
+    "source": "BrickLink inventory export",
+    "imageKind": "official-catalog"
   },
   {
     "id": "bl-557910333",
@@ -53,7 +55,7 @@ const products = [
     "label": "Star Wars",
     "price": 380.0,
     "detail": "used",
-    "image": null,
+    "image": "lego/7964.jpg",
     "meta": "Set 7964",
     "description": "Komplett mit Anleitung und Originalverpackung.",
     "tag": "",
@@ -64,7 +66,8 @@ const products = [
     "itemNumber": "7964-1",
     "lotId": "557910333",
     "sourceDescription": "complete with box and instructions",
-    "source": "BrickLink inventory export"
+    "source": "BrickLink inventory export",
+    "imageKind": "official-catalog"
   },
   {
     "id": "bl-531763534",
@@ -75,7 +78,7 @@ const products = [
     "label": "NINJAGO",
     "price": 160.0,
     "detail": "used",
-    "image": null,
+    "image": "lego/2506.jpg",
     "meta": "Set 2506",
     "description": "100 % komplett mit Anleitung und Figuren.",
     "tag": "",
@@ -86,7 +89,8 @@ const products = [
     "itemNumber": "2506-1",
     "lotId": "531763534",
     "sourceDescription": "100% complete with instructions and figs",
-    "source": "BrickLink inventory export"
+    "source": "BrickLink inventory export",
+    "imageKind": "official-catalog"
   },
   {
     "id": "bl-557910446",
@@ -97,7 +101,7 @@ const products = [
     "label": "Star Wars",
     "price": 45.0,
     "detail": "used",
-    "image": null,
+    "image": "lego/9488.jpg",
     "meta": "Set 9488",
     "description": "Komplett mit Anleitung und Originalverpackung.",
     "tag": "",
@@ -108,7 +112,8 @@ const products = [
     "itemNumber": "9488-1",
     "lotId": "557910446",
     "sourceDescription": "complete with box and instructions",
-    "source": "BrickLink inventory export"
+    "source": "BrickLink inventory export",
+    "imageKind": "official-catalog"
   },
   {
     "id": "bl-552379258",
@@ -119,7 +124,7 @@ const products = [
     "label": "Star Wars",
     "price": 25.0,
     "detail": "used",
-    "image": null,
+    "image": "lego/9489.jpg",
     "meta": "Set 9489",
     "description": "Komplett mit Anleitung und Originalverpackung.",
     "tag": "",
@@ -130,7 +135,8 @@ const products = [
     "itemNumber": "9489-1",
     "lotId": "552379258",
     "sourceDescription": "complete with instructions and box",
-    "source": "BrickLink inventory export"
+    "source": "BrickLink inventory export",
+    "imageKind": "official-catalog"
   },
   {
     "id": "bl-538304301",
@@ -141,7 +147,7 @@ const products = [
     "label": "Star Wars",
     "price": 45.0,
     "detail": "used",
-    "image": null,
+    "image": "lego/9491.jpg",
     "meta": "Set 9491",
     "description": "Komplett, ohne Anleitung und Originalverpackung.",
     "tag": "",
@@ -152,7 +158,8 @@ const products = [
     "itemNumber": "9491-1",
     "lotId": "538304301",
     "sourceDescription": "Complete without instructions or box",
-    "source": "BrickLink inventory export"
+    "source": "BrickLink inventory export",
+    "imageKind": "official-catalog"
   },
   {
     "id": "bl-552376489",
@@ -163,7 +170,7 @@ const products = [
     "label": "Lord of the Rings",
     "price": 50.0,
     "detail": "used",
-    "image": null,
+    "image": "lego/9470.jpg",
     "meta": "Set 9470",
     "description": "Komplett, ohne Anleitung. Beide Figuren haben Risse am Oberkörper.",
     "tag": "",
@@ -174,7 +181,8 @@ const products = [
     "itemNumber": "9470-1",
     "lotId": "552376489",
     "sourceDescription": "complete without instructions, both figs have torso cracks",
-    "source": "BrickLink inventory export"
+    "source": "BrickLink inventory export",
+    "imageKind": "official-catalog"
   },
   {
     "id": "bl-530421769",
@@ -185,7 +193,7 @@ const products = [
     "label": "NINJAGO",
     "price": 220.0,
     "detail": "used",
-    "image": null,
+    "image": "lego/9449.jpg",
     "meta": "Set 9449",
     "description": "100 % komplett mit allen Figuren und Anleitung.",
     "tag": "",
@@ -196,7 +204,8 @@ const products = [
     "itemNumber": "9449-1",
     "lotId": "530421769",
     "sourceDescription": "100% complete with all figures and instructions",
-    "source": "BrickLink inventory export"
+    "source": "BrickLink inventory export",
+    "imageKind": "official-catalog"
   },
   {
     "id": "75021",
@@ -218,7 +227,8 @@ const products = [
     "itemNumber": "75021-1",
     "lotId": "562778052",
     "sourceDescription": "with box and instructions",
-    "source": "BrickLink inventory export"
+    "source": "BrickLink inventory export",
+    "imageKind": "uploaded"
   },
   {
     "id": "bl-545876807",
@@ -229,7 +239,7 @@ const products = [
     "label": "Ultra Agents",
     "price": 60.0,
     "detail": "used",
-    "image": null,
+    "image": "lego/70165.png",
     "meta": "Set 70165",
     "description": "100 % komplett mit Anleitung.",
     "tag": "",
@@ -240,7 +250,8 @@ const products = [
     "itemNumber": "70165-1",
     "lotId": "545876807",
     "sourceDescription": "100% Complete with instructions",
-    "source": "BrickLink inventory export"
+    "source": "BrickLink inventory export",
+    "imageKind": "official-catalog"
   },
   {
     "id": "bl-557910011",
@@ -251,7 +262,7 @@ const products = [
     "label": "Star Wars",
     "price": 180.0,
     "detail": "used",
-    "image": null,
+    "image": "lego/75058.jpg",
     "meta": "Set 75058",
     "description": "Komplett mit Anleitung.",
     "tag": "",
@@ -262,7 +273,8 @@ const products = [
     "itemNumber": "75058-1",
     "lotId": "557910011",
     "sourceDescription": "complete with instructions",
-    "source": "BrickLink inventory export"
+    "source": "BrickLink inventory export",
+    "imageKind": "official-catalog"
   },
   {
     "id": "bl-529424192",
@@ -273,7 +285,7 @@ const products = [
     "label": "NINJAGO",
     "price": 330.0,
     "detail": "used",
-    "image": null,
+    "image": "lego/70732.jpg",
     "meta": "Set 70732",
     "description": "Aufdrucke Nr. 9 und 10 fehlen. Ansonsten komplett mit Figuren und Anleitung.",
     "tag": "",
@@ -284,18 +296,19 @@ const products = [
     "itemNumber": "70732-1",
     "lotId": "529424192",
     "sourceDescription": "print nr. 9 and 10 missing. Otherwise complete with figures and instructions.",
-    "source": "BrickLink inventory export"
+    "source": "BrickLink inventory export",
+    "imageKind": "official-catalog"
   },
   {
     "id": "bl-508482381",
-    "name": "Kanan’s Speeder Bike (75141)",
+    "name": "Kanan's Speeder Bike (75141)",
     "shop": "sets",
     "category": "star-wars",
     "theme": "star-wars",
     "label": "Star Wars",
     "price": 60.0,
     "detail": "new",
-    "image": null,
+    "image": "lego/75141.jpg",
     "meta": "Set 75141",
     "description": "Einwandfreier Zustand.",
     "tag": "",
@@ -306,7 +319,8 @@ const products = [
     "itemNumber": "75141-1",
     "lotId": "508482381",
     "sourceDescription": "Perfect condition",
-    "source": "BrickLink inventory export"
+    "source": "BrickLink inventory export",
+    "imageKind": "official-catalog"
   },
   {
     "id": "bl-533113926",
@@ -317,7 +331,7 @@ const products = [
     "label": "NINJAGO",
     "price": 400.0,
     "detail": "used",
-    "image": null,
+    "image": "lego/70596.jpg",
     "meta": "Set 70596",
     "description": "100 % komplett mit Anleitung und Originalverpackung.",
     "tag": "",
@@ -328,7 +342,8 @@ const products = [
     "itemNumber": "70596-1",
     "lotId": "533113926",
     "sourceDescription": "100% complete with instructions and Box",
-    "source": "BrickLink inventory export"
+    "source": "BrickLink inventory export",
+    "imageKind": "official-catalog"
   },
   {
     "id": "bl-531764988",
@@ -339,7 +354,7 @@ const products = [
     "label": "Star Wars",
     "price": 35.0,
     "detail": "used",
-    "image": null,
+    "image": "lego/75206.jpg",
     "meta": "Set 75206",
     "description": "100 % komplett mit Anleitung und Originalverpackung.",
     "tag": "",
@@ -350,7 +365,8 @@ const products = [
     "itemNumber": "75206-1",
     "lotId": "531764988",
     "sourceDescription": "100% complete with instructions and Box",
-    "source": "BrickLink inventory export"
+    "source": "BrickLink inventory export",
+    "imageKind": "official-catalog"
   },
   {
     "id": "bl-556123871",
@@ -361,7 +377,7 @@ const products = [
     "label": "Stranger Things",
     "price": 350.0,
     "detail": "used",
-    "image": null,
+    "image": "lego/75810.jpg",
     "meta": "Set 75810",
     "description": "Komplett mit allen Figuren. Ohne Anleitung und Originalverpackung.",
     "tag": "",
@@ -372,6 +388,7 @@ const products = [
     "itemNumber": "75810-1",
     "lotId": "556123871",
     "sourceDescription": "complete with all figs\nno instructions or box",
-    "source": "BrickLink inventory export"
+    "source": "BrickLink inventory export",
+    "imageKind": "official-catalog"
   }
 ];
