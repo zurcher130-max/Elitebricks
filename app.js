@@ -1,8 +1,8 @@
 'use strict';
 const products = [
-  {id:'city', name:'Deine kleine Großstadt', category:'architecture', label:'Architektur', pieces:864, price:69.90, color:'cream', background:'#efeee7', tag:'Neue Perspektiven'},
-  {id:'road', name:'Bereit für neue Wege', category:'vehicles', label:'Fahrzeuge', pieces:512, price:49.90, color:'blue', background:'#e7edf0', tag:'Für Entdecker'},
-  {id:'ideas', name:'Eine Box voller Möglichkeiten', category:'creative', label:'Kreativ-Set', pieces:1000, price:39.90, color:'orange', background:'#f4e9df', tag:'Freie Fantasie'}
+  {id:'city', name:'Deine kleine Großstadt', category:'architecture', label:'Architektur', pieces:864, price:69.90, color:'cream', background:'#f4f4f4', tag:'Neue Perspektiven'},
+  {id:'road', name:'Bereit für neue Wege', category:'vehicles', label:'Fahrzeuge', pieces:512, price:49.90, color:'blue', background:'#f4f4f4', tag:'Für Entdecker'},
+  {id:'ideas', name:'Eine Box voller Möglichkeiten', category:'creative', label:'Kreativ-Set', pieces:1000, price:39.90, color:'orange', background:'#f4f4f4', tag:'Freie Fantasie'}
 ];
 const formatPrice = price => `CHF ${price.toFixed(2)}`;
 let cart = {};
