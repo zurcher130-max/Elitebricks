@@ -1,6 +1,20 @@
-// Shared example catalog. Replace with real product data before selling.
-// Generic demo products belong to Sonstige; set theme to a filter key for real products.
+// Shared catalog: user-supplied test listing and generic example products.
 const products = [
+  {
+    "id": "75021",
+    "name": "Republic Gunship (75021)",
+    "shop": "sets",
+    "category": "vehicles",
+    "label": "Star Wars",
+    "theme": "star-wars",
+    "price": 320,
+    "detail": "large",
+    "image": null,
+    "meta": "Set 75021",
+    "description": "Komplett mit Anleitung und Originalverpackung (OVP).",
+    "tag": "Dein Testprodukt",
+    "example": false
+  },
   {
     "id": "city",
     "name": "Deine kleine Großstadt",

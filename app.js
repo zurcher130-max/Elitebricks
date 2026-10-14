@@ -12,7 +12,7 @@ function renderProducts() {
     const category = form.elements.category.value;
     const detail = form.elements.detail.value;
     const price = form.elements.price.value;
-    visible = visible.filter(p => (!query || `${p.name} ${p.id} ${p.label} ${p.meta}`.toLocaleLowerCase('de').includes(query)) && (category === 'all' || (shop === 'einzelteile' ? p.category : p.theme) === category) && (detail === 'all' || p.detail === detail) && (price === 'all' || (price === 'under10' && p.price <= 10) || (price === '10to50' && p.price > 10 && p.price <= 50) || (price === 'over50' && p.price > 50)));
+    visible = visible.filter(p => (!query || `${p.name} ${p.id} ${p.label} ${p.meta} ${p.description || ""}`.toLocaleLowerCase('de').includes(query)) && (category === 'all' || (shop === 'einzelteile' ? p.category : p.theme) === category) && (detail === 'all' || p.detail === detail) && (price === 'all' || (price === 'under10' && p.price <= 10) || (price === '10to50' && p.price > 10 && p.price <= 50) || (price === 'over50' && p.price > 50)));
     const sort = document.querySelector('#sort').value;
     if (sort === 'price-asc') visible.sort((a,b) => a.price - b.price);
     if (sort === 'price-desc') visible.sort((a,b) => b.price - a.price);
@@ -20,7 +20,7 @@ function renderProducts() {
     document.querySelector('#result-count').textContent = `${visible.length} ${visible.length === 1 ? 'Produkt' : 'Produkte'}`;
     document.querySelector('#empty-results').hidden = visible.length !== 0;
   }
-  document.querySelector('#products').innerHTML = visible.map(p => `<article class="product-card" data-product-id="${p.id}" data-price="${p.price}"><div class="product-image"><span class="product-tag">${p.tag}</span><img src="assets/${p.image}" alt="Symbolbild für ${p.name}" loading="lazy"></div><div class="product-meta">${p.label} · ${p.meta} · Beispiel</div><h3>${p.name}</h3><div class="product-bottom"><span>${formatPrice(p.price)}</span><button class="add-button" data-add="${p.id}" aria-label="${p.name} zum Warenkorb hinzufügen">+</button></div></article>`).join('');
+  document.querySelector('#products').innerHTML = visible.map(p => `<article class="product-card" data-product-id="${p.id}" data-price="${p.price}"><div class="product-image"><span class="product-tag">${p.tag}</span>${p.image ? `<img class="${p.example === false ? "real-product-image" : ""}" src="assets/${p.image}" alt="${p.example === false ? "Produktbild" : "Symbolbild"} für ${p.name}" loading="lazy">` : `<div class="image-pending"><span>75021</span><p>Produktbild folgt</p></div>`}</div><div class="product-meta">${p.label} · ${p.meta}${p.example === false ? "" : " · Beispiel"}</div><h3>${p.name}</h3>${p.description ? `<p class="product-description">${p.description}</p>` : ""}<div class="product-bottom"><span>${formatPrice(p.price)}</span><button class="add-button" data-add="${p.id}" aria-label="${p.name} zum Warenkorb hinzufügen">+</button></div></article>`).join('');
 }
 if (form) {
   form.addEventListener('submit', e => e.preventDefault());
