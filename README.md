@@ -17,7 +17,9 @@ Alternativ kann `index.html` direkt im Browser geöffnet werden.
 
 - `index.html`: Texte und Seitenstruktur
 - `styles.css`: Layout, Farben und responsive Darstellung
-- `app.js`: Beispielprodukte, CHF-Preise, Filter und Demo-Warenkorb
+- `sets.html`, `minifiguren.html`, `einzelteile.html`: eigene Sortiment-Seiten
+- `catalog.js`: gemeinsamer Beispielkatalog mit CHF-Preisen und Filtermerkmalen
+- `app.js`: Suche, kombinierbare Filter, Sortierung und gemeinsamer Demo-Warenkorb
 - `assets/`: lokale SVG-Illustrationen
 
 Google Fonts werden optional über HTTPS geladen; ohne Netzwerk werden Systemschriften verwendet.
@@ -25,3 +27,7 @@ Google Fonts werden optional über HTTPS geladen; ohne Netzwerk werden Systemsch
 ## Vor einem echten Shop-Start
 
 Die Produkte, Stückzahlen und Preise sind Beispiele. Die Illustrationen sind Symbolbilder. Der Checkout nimmt keine Zahlungen oder Bestellungen entgegen. Echte Produktdaten, Kontaktinformationen, rechtliche Angaben und eine Shop-/Zahlungsanbindung müssen vor Veröffentlichung als Online-Shop ergänzt werden.
+
+## Sortiment-Seiten
+
+Alle Sortiment-Seiten bieten Suche nach Name oder Artikelkennung, kombinierbare Kategorie-, Merkmals- und Preisfilter, Sortierung nach Preis oder Name, Ergebnisanzahl und Filter-Zurücksetzen. Sets: Themenwelt und Teileanzahl. Minifiguren: Themenwelt und Zubehör. Einzelteile: Teiletyp und Farbe. Der Warenkorb bleibt beim Seitenwechsel erhalten. Alle 18 Produkte und Illustrationen sind Beispiele, keine echten Angebote.
