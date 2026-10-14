@@ -1,37 +1,42 @@
 # Elitebricks
 
-Responsive deutschsprachige Startseite für einen Klemmbaustein-Shop. Statische Website mit Kategorie-Filtern und einem Demo-Warenkorb, der lokal im Browser gespeichert wird.
+Statische deutschsprachige Shop-Website mit Sets, Minifiguren und Einzelteilen, Filtern und gemeinsamem lokal gespeichertem Demo-Warenkorb.
 
 ## Lokal starten
-
-Python 3 ist ausreichend; es werden keine Pakete benötigt:
 
 ```sh
 cd /workspace/Elitebricks
 python3 -m http.server 8000 --bind 0.0.0.0
 ```
 
-Alternativ kann `index.html` direkt im Browser geöffnet werden.
+Keine Paketinstallation erforderlich. Optionale Google Fonts fallen ohne Netzwerk auf Systemschriften zurück.
 
-## Inhalte anpassen
+## Aktueller Inventarstand
 
-- `index.html`: Texte und Seitenstruktur
-- `styles.css`: Layout, Farben und responsive Darstellung
-- `sets.html`, `minifiguren.html`, `einzelteile.html`: eigene Sortiment-Seiten
-- `catalog.js`: gemeinsamer Beispielkatalog mit CHF-Preisen und Filtermerkmalen
-- `app.js`: Suche, kombinierbare Filter, Sortierung und gemeinsamer Demo-Warenkorb
-- `assets/`: lokale SVG-Illustrationen
+17 Sets aus dem hochgeladenen BrickLink-Export, jeweils 1 Stück, alle Preise in CHF. Keine Minifiguren oder Einzelteile im Export. Die früheren Beispielangebote wurden entfernt. Das Republic Gunship nutzt das hochgeladene Foto; die übrigen Bildfelder des Exports waren leer. Setnummern und „Produktbild folgt“ ersetzen fehlende Bilder.
 
-Google Fonts werden optional über HTTPS geladen; ohne Netzwerk werden Systemschriften verwendet.
+Preise, Mengen, Zustand und Originalbeschreibungen stammen aus dem XML. Englische Produktnamen und deutsche Beschreibungen werden im Importer ergänzt und können dort überprüft/angepasst werden. Hinweise auf fehlende Aufdrucke oder gerissene Oberkörper bleiben sichtbar. Der Export enthält keine Teileanzahlen; Sets werden daher nach Zustand statt Teileanzahl gefiltert.
 
-## Vor einem echten Shop-Start
+## Inventar aktualisieren
 
-Die Produkte, Stückzahlen und Preise sind Beispiele. Die Illustrationen sind Symbolbilder. Der Checkout nimmt keine Zahlungen oder Bestellungen entgegen. Echte Produktdaten, Kontaktinformationen, rechtliche Angaben und eine Shop-/Zahlungsanbindung müssen vor Veröffentlichung als Online-Shop ergänzt werden.
+```sh
+python3 tools/import_inventory.py /pfad/zum/inventar.xml
+node --check catalog.js
+node --check app.js
+```
 
-## Sortiment-Seiten
+Der Import ersetzt den gesamten Katalog, führt keine Netzwerkabfragen durch und setzt keine Synchronisierung mit BrickLink voraus. Nicht unterstützte Artikeltypen, Währungen, Rabatt-/Bulk-Preise und ungültige Daten führen zum Abbruch, bevor der Katalog überschrieben wird. Artikel ohne Bestand werden ausgelassen. Unbekannte Artikel erscheinen unter ihrer Artikelnummer und „Sonstige“; Namen, Themenwelten und Übersetzungen können in `tools/import_inventory.py` ergänzt werden. Die Mengen begrenzen den Demo-Warenkorb; Verkäufe außerhalb der Website werden erst nach neuem Import berücksichtigt.
 
-Alle Sortiment-Seiten bieten Suche nach Name oder Artikelkennung, kombinierbare Kategorie-, Merkmals- und Preisfilter, Sortierung nach Preis oder Name, Ergebnisanzahl und Filter-Zurücksetzen. Sets: Themenwelt und Teileanzahl. Minifiguren: Themenwelt und Zubehör. Einzelteile: Teiletyp und Farbe. Der Warenkorb bleibt beim Seitenwechsel erhalten. Alle 18 Produkte und Illustrationen sind Beispiele, keine echten Angebote.
+## Dateien
 
-## Themenwelten
+- `index.html`: Startseite
+- `sets.html`, `minifiguren.html`, `einzelteile.html`: Sortiment-Seiten
+- `catalog.js`: importierter Inventarstand
+- `app.js`: kombinierbare Filter, Suche, Sortierung und Demo-Warenkorb
+- `styles.css`: responsives Layout
+- `assets/`: Logo, Bilder und Illustrationen
+- `tools/import_inventory.py`: wiederholbarer XML-Import
 
-Sets und Minifiguren verwenden die vollständige Themenwelt-Auswahl. LEGO Movie 1/2 sowie Lord of the Rings/Hobbit sind separat auswählbar. Die generischen Beispielprodukte sind unter `Sonstige` eingeordnet; es werden keine offiziellen Markenprodukte vorgetäuscht. Bei echten Produkten das Feld `theme` in `catalog.js` setzen (z. B. `star-wars`, `ninjago`, `harry-potter`, `city`). Die bisherigen Kategorien bleiben für die Startseite erhalten.
+## Vor dem Shop-Start
+
+Der Checkout führt keine Bestellungen oder Zahlungen aus. Kontaktinformationen, rechtliche Angaben und eine echte Shop-/Zahlungsanbindung müssen ergänzt werden. Der Bestand ist eine Momentaufnahme und wird nicht automatisch mit BrickLink abgeglichen. Fehlende Produktbilder müssen ergänzt werden.
