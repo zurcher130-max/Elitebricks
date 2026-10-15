@@ -5,6 +5,16 @@ const shipping={standard:{label:'PostPac Standard',amount:900},priority:{label:'
 const encoder=new TextEncoder();
 class CheckoutError extends Error {constructor(message,status=400,definitive=false){super(message);this.status=status;this.definitive=definitive;}}
 function response(data,status=200){return Response.json(data,{status,headers:{'Cache-Control':'no-store'}});}
+export function setupStatus(env){
+  return {
+    version:'checkout-diagnostics-v1',
+    paymentsEnabled:env.PAYMENTS_ENABLED==='true',
+    adminKeyPresent:typeof env.ADMIN_API_KEY==='string'&&env.ADMIN_API_KEY.length>0,
+    adminKeyLongEnough:typeof env.ADMIN_API_KEY==='string'&&env.ADMIN_API_KEY.length>=32,
+    stripeTestKeyConfigured:env.STRIPE_SECRET_KEY?.startsWith('sk_test_')===true,
+    webhookSecretConfigured:env.STRIPE_WEBHOOK_SECRET?.startsWith('whsec_')===true
+  };
+}
 function enabled(env){
   if(env.PAYMENTS_ENABLED!=='true')throw new CheckoutError('Die Online-Zahlung ist noch nicht aktiviert.',503);
   if(!env.ADMIN_API_KEY||env.ADMIN_API_KEY.length<32)throw new CheckoutError('Die Bestellverwaltung ist noch nicht eingerichtet.',503);
@@ -149,6 +159,7 @@ export class Shop {
   async fetch(request){
     try{
       const path=new URL(request.url).pathname;
+      if(path==='/health'&&request.method==='GET')return response(setupStatus(this.env));
       if(path==='/checkout'&&request.method==='POST')return await this.create(request);
       if(path==='/webhook'&&request.method==='POST')return await this.webhook(request);
       if(path==='/status'&&request.method==='GET')return await this.status(request);
@@ -164,6 +175,11 @@ export class Shop {
 export default {
   async fetch(request,env){
     const url=new URL(request.url);const origin=request.headers.get('Origin');
+    if(url.pathname==='/health'&&request.method==='GET'){
+      const report=setupStatus(env);
+      try {const result=await env.SHOP.get(env.SHOP.idFromName('inventory-test-v1')).fetch(new Request('https://internal/health'));return response({worker:report,orderStorage:await result.json()});}
+      catch {return response({worker:report,orderStorage:{available:false}},503);}
+    }
     if(url.pathname==='/orders'&&request.method==='GET'){
       const expected=env.ADMIN_API_KEY;const supplied=request.headers.get('Authorization');
       if(!expected||expected.length<32||!supplied||await fingerprint(supplied)!==await fingerprint(`Bearer ${expected}`))return response({error:'Unauthorized.'},401);

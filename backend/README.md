@@ -51,3 +51,7 @@ Stripe-Aufrufe haben stabile Idempotenzkennungen. Eine eindeutige Stripe-4xx-Abl
 Noch keine Live-Freigabe, automatische E-Mails, Rückerstattungsoberfläche, Versandetiketten oder BrickLink-Synchronisierung. Vor echtem Verkauf sind zusätzlich Händlerablauf, Bestandsabgleich, Lageradresse und rechtliche Angaben fertigzustellen.
 
 `npm run dev` startet den lokalen Worker. Ohne aktivierte Zahlung und Secrets liefert `/checkout` 503. Geheimnisse für lokale Tests gehören ausschließlich in die ignorierte `.dev.vars` (siehe `.dev.vars.example`).
+
+## Einrichtungsdiagnose
+
+`GET /health` zeigt ausschließlich Ja/Nein-Status für den aktiven Worker und den Bestellspeicher: Zahlung aktiviert, Admin-Schlüssel vorhanden/mindestens 32 Zeichen, Stripe-Testschlüssel und Webhook-Schlüssel eingerichtet. Keine Schlüsselwerte, Kundendaten oder exakten Schlüssellängen werden ausgegeben. `version: checkout-diagnostics-v1` zeigt, dass die Diagnose-Version bereitgestellt wurde. Unterschiede zwischen `worker` und `orderStorage` weisen auf unterschiedliche aktive Konfigurationsstände hin.

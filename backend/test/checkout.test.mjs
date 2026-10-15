@@ -67,3 +67,12 @@ test('CORS and merchant authentication',async()=>{
  const r=await worker.fetch(new Request('https://worker.example/checkout',{method:'OPTIONS',headers:{Origin:e.SITE_ORIGIN}}),e);assert.equal(r.status,204);assert.equal(r.headers.get('Access-Control-Allow-Origin'),e.SITE_ORIGIN);
  assert.equal((await worker.fetch(new Request('https://worker.example/orders'),e)).status,401);assert.equal((await worker.fetch(new Request('https://worker.example/orders',{headers:{Authorization:'Bearer '+e.ADMIN_API_KEY}}),e)).status,200);
 });
+
+test('setup report distinguishes missing/short secrets without exposing values',async()=>{
+ const {shop,e}=setup();e.SHOP={idFromName:()=>1,get:()=>({fetch:r=>shop.fetch(r)})};
+ let result=await worker.fetch(new Request('https://worker.example/health'),e);let report=await result.json();
+ assert.equal(report.worker.adminKeyLongEnough,true);assert.equal(report.orderStorage.adminKeyLongEnough,true);
+ for(const secret of [e.ADMIN_API_KEY,e.STRIPE_SECRET_KEY,e.STRIPE_WEBHOOK_SECRET])assert.equal(JSON.stringify(report).includes(secret),false);
+ e.ADMIN_API_KEY='short';result=await worker.fetch(new Request('https://worker.example/health'),e);report=await result.json();assert.equal(report.worker.adminKeyPresent,true);assert.equal(report.worker.adminKeyLongEnough,false);
+ delete e.ADMIN_API_KEY;result=await worker.fetch(new Request('https://worker.example/health'),e);report=await result.json();assert.equal(report.worker.adminKeyPresent,false);
+});
