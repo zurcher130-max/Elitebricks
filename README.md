@@ -56,3 +56,9 @@ Der CSV-Import ersetzt nur die Minifiguren und bewahrt die Sets samt Bildern. Ar
 ## Figurenbilder
 
 54 unterschiedliche Figurenbilder von Merlins Steine sind unter `assets/minifigures` lokal gespeichert und anhand exakter BrickLink-Artikelnummern zugeordnet. Damit haben 55 von 56 Figuren-Angeboten ein Bild (ein Artikel kommt in zwei Lots vor). `sw0386` fehlt dort und bleibt ohne Bild; keine ähnliche Variante wurde eingesetzt. `sources.json` enthält Quell-URLs und Zuordnung, der CSV-Importer erhält sie bei Aktualisierungen. Die Website nennt Merlins Steine als Quelle. Katalogbilder zeigen nicht den individuellen Zustand des angebotenen Exemplars.
+
+## Warenkorb und Adresse
+
+`warenkorb.html` mit `checkout.js` bietet Mengenänderung innerhalb des importierten Bestands, Entfernen, Kontaktdaten, Lieferadresse und eine lokale Zusammenfassung zum Herunterladen. Der bestehende Mini-Warenkorb führt über „Adresse & Versand“ auf diese Seite. Standardversand innerhalb der Schweiz kostet CHF 9, PostPac Priority CHF 11, Lagerabholung ist kostenlos, Shopabholung deaktiviert. Die Versandkosten werden einmal pro Warenkorb berechnet. Lageradresse und Abholtermine müssen vor einer verbindlichen Bestellfunktion ergänzt werden.
+
+Adress- und Kontaktdaten werden nicht in Local Storage gespeichert und nicht übertragen. Nur Artikel und Mengen bleiben wie bisher lokal gespeichert. Es gibt keine Zahlung und keinen Bestellversand; die Zusammenfassung ist eine Vorschau. Lagerabholung benötigt Kontaktangaben, Postversand zusätzlich eine Schweizer Lieferadresse mit vierstelliger PLZ.

@@ -51,7 +51,7 @@ document.querySelector('#open-cart').addEventListener('click', () => dialog.show
 document.querySelector('#close-cart').addEventListener('click', () => dialog.close());
 dialog.addEventListener('click', e => {if (e.target === dialog) {const r = dialog.getBoundingClientRect(); if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) dialog.close();}});
 document.querySelector('#cart-items').addEventListener('click', e => {const button = e.target.closest('[data-remove]'); if (!button) return; const id = button.dataset.remove; if (--cart[id] <= 0) delete cart[id]; renderCart(); renderProducts();});
-document.querySelector('#checkout').addEventListener('click', () => {document.querySelector('#checkout-note').textContent = 'Dies ist eine Shop-Demo. Für echte Bestellungen müssen Shop-System, Zahlungsanbieter und rechtliche Angaben eingerichtet werden.';});
+document.querySelector('#checkout').addEventListener('click', () => { window.location.href = 'warenkorb.html'; });
 document.querySelector('#year').textContent = new Date().getFullYear();
 renderProducts(); renderCart();
 
