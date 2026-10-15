@@ -9,6 +9,10 @@ const shippingMethods = {
 const form = document.querySelector('#address-form');
 let cart = {};
 let reviewedText = '';
+let reviewedOrder = null;
+let paymentPending = false;
+const paymentConfig = window.ELITEBRICKS_PAYMENTS;
+const paymentsReady = paymentConfig?.enabled === true && /^https:\/\//.test(paymentConfig.apiBase || '');
 function readCart() {
   cart = {};
   try {
@@ -29,6 +33,9 @@ function totals() {
 function clearReview() {
   document.querySelector('#order-review').hidden = true;
   reviewedText = '';
+  reviewedOrder = null;
+  document.querySelector('#stripe-checkout').hidden = true;
+  document.querySelector('#stripe-status').textContent = '';
 }
 function renderSummary() {
   const t = totals();
@@ -79,6 +86,8 @@ form.addEventListener('submit', event => {
   const lines = products.filter(p=>cart[p.id]).map(p=>`${cart[p.id]} × ${p.name}: ${money(Math.round(p.price*100)*cart[p.id])}`);
   reviewedText = ['ELITE BRICKS – ZUSAMMENFASSUNG (NICHT ABGESENDET)','',...lines,'',`Zwischensumme: ${money(t.subtotal)}`,`${selectedShipping().label}: ${money(t.shipping)}`,`Gesamt: ${money(t.total)}`,'','Kontakt:',contact,'',values.shipping === 'warehouse' ? 'Abholung:' : 'Lieferadresse:',address,values.notes ? '\nAnmerkungen:\n'+values.notes : '','\nEs wurde keine Bestellung übermittelt und keine Zahlung ausgelöst.'].join('\n');
   document.querySelector('#review-content').innerHTML = `<h3>Kontakt</h3><p>${escapeHTML(contact).replace(/\n/g,'<br>')}</p><h3>${values.shipping === 'warehouse' ? 'Abholung' : 'Lieferadresse'}</h3><p>${escapeHTML(address).replace(/\n/g,'<br>')}</p><h3>Deine Auswahl</h3><ul>${lines.map(line=>`<li>${escapeHTML(line)}</li>`).join('')}</ul><p>${escapeHTML(selectedShipping().label)}: ${money(t.shipping)}</p><p><strong>Gesamtbetrag: ${money(t.total)}</strong></p>${values.notes ? `<h3>Anmerkungen</h3><p>${escapeHTML(values.notes)}</p>` : ''}`;
+  reviewedOrder = {items:products.filter(p=>cart[p.id]).map(p=>({id:p.id,quantity:cart[p.id]})),shipping:values.shipping,customer:{...values}};
+  document.querySelector('#stripe-checkout').hidden = !paymentsReady;
   const review = document.querySelector('#order-review');review.hidden=false;review.focus();review.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
 });
 document.querySelector('#download-order').addEventListener('click',()=>{
@@ -89,3 +98,30 @@ document.querySelector('#download-order').addEventListener('click',()=>{
 window.addEventListener('storage',event=>{if(event.key==='elitebricks-cart'){readCart();clearReview();renderItems();}});
 document.querySelector('#year').textContent=new Date().getFullYear();
 readCart();saveCart();renderItems();shippingChanged();
+
+// Stripe Checkout is activated only after configuring the deployed test backend.
+document.querySelector('#stripe-checkout').addEventListener('click', async () => {
+  if (!paymentsReady || !reviewedOrder || paymentPending) return;
+  paymentPending = true;
+  form.inert=true;document.querySelector('#order-items').inert=true;
+  const button=document.querySelector('#stripe-checkout');button.disabled=true;
+  const status=document.querySelector('#stripe-status');status.textContent='Deine Testzahlung wird vorbereitet …';
+  try {
+    const body=JSON.stringify(reviewedOrder);
+    const digest=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(body));
+    const hash=Array.from(new Uint8Array(digest),n=>n.toString(16).padStart(2,'0')).join('');
+    let saved;try {saved=JSON.parse(sessionStorage.getItem('elitebricks-stripe-request') || 'null');} catch {}
+    const key=saved?.hash===hash?saved.key:crypto.randomUUID();
+    try {sessionStorage.setItem('elitebricks-stripe-request',JSON.stringify({key,hash}));} catch {}
+    const result=await fetch(paymentConfig.apiBase.replace(/\/$/,'')+'/checkout',{method:'POST',headers:{'Content-Type':'application/json','Idempotency-Key':key},body});
+    const data=await result.json();
+    if(!result.ok) {
+      if(result.status===409 || data.retryNewOrder===true)try {sessionStorage.removeItem('elitebricks-stripe-request');} catch {}
+      throw Error(data.error || 'Die Zahlungsseite ist gerade nicht erreichbar.');
+    }
+    if(typeof data.url!=='string'||new URL(data.url).origin!=='https://checkout.stripe.com')throw Error('Die Zahlungsseite konnte nicht sicher geöffnet werden.');
+    window.location.assign(data.url);
+  } catch(error) {status.textContent=error.message || 'Bitte versuche es später erneut.';}
+  finally {paymentPending=false;button.disabled=false;form.inert=false;document.querySelector('#order-items').inert=false;}
+});
+if(new URLSearchParams(location.search).get('payment')==='cancelled') document.querySelector('#cart-status').textContent='Die Zahlung wurde abgebrochen. Dein Warenkorb bleibt erhalten. Bitte beachte: Eine Zahlungsreservierung kann bis zum Ablauf der Stripe-Sitzung bestehen bleiben.';

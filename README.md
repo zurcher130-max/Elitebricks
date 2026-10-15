@@ -66,3 +66,7 @@ Adress- und Kontaktdaten werden nicht in Local Storage gespeichert und nicht üb
 ## Produktseiten
 
 Bild und Name jeder Produktkarte führen zu `produkt.html?id=<Lot-ID>` (z. B. `produkt.html?id=75021`). `product.js` lädt die Details aus `catalog.js`: großes Bild mit Quellenhinweis, Beschreibung, Zustand, Artikelnummer, Preis, Bestand, Mengenauswahl und Versandübersicht. Der gleiche Artikel bleibt pro Lot eindeutig; doppelt angebotene Figuren haben getrennte Links. Die Mengenprüfung berücksichtigt bereits im Warenkorb enthaltene Stücke und Änderungen in anderen Tabs. Ungültige/fehlende Produktkennungen zeigen eine Rückkehr zum Sortiment statt einer leeren Seite. Auch die Artikelnamen im Warenkorb sind verlinkt.
+
+## Stripe-Testbetrieb (vorbereitet)
+
+`backend/` enthält den Cloudflare Worker mit Bestell- und Reservierungsspeicherung und signaturgeprüften Stripe-Webhooks. Installation, sichere Secret-Eingabe, Deployment und ausstehender echter Sandbox-Test: [backend/README.md](backend/README.md). `payments-config.js` hält die Website standardmäßig im bisherigen Vorschau-Modus; geheime Schlüssel sind dort verboten. Der Testzahlungsbutton wird erst nach Einrichtung sichtbar. Live-Schlüssel werden derzeit abgelehnt.

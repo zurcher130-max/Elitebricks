@@ -1,0 +1,440 @@
+[
+  {
+    "id": "bl-552380026",
+    "name": "The Battle of Endor (8038)",
+    "unitAmount": 28000,
+    "stock": 1
+  },
+  {
+    "id": "bl-537835096",
+    "name": "ARC-170 Starfighter (8088)",
+    "unitAmount": 19000,
+    "stock": 1
+  },
+  {
+    "id": "bl-557910333",
+    "name": "Republic Frigate (7964)",
+    "unitAmount": 38000,
+    "stock": 1
+  },
+  {
+    "id": "bl-531763534",
+    "name": "Skull Truck (2506)",
+    "unitAmount": 16000,
+    "stock": 1
+  },
+  {
+    "id": "bl-557910446",
+    "name": "Elite Clone Trooper & Commando Droid Battle Pack (9488)",
+    "unitAmount": 4500,
+    "stock": 1
+  },
+  {
+    "id": "bl-552379258",
+    "name": "Endor Rebel Trooper & Imperial Trooper Battle Pack (9489)",
+    "unitAmount": 2500,
+    "stock": 1
+  },
+  {
+    "id": "bl-538304301",
+    "name": "Geonosian Cannon (9491)",
+    "unitAmount": 4500,
+    "stock": 1
+  },
+  {
+    "id": "bl-552376489",
+    "name": "Shelob Attacks (9470)",
+    "unitAmount": 5000,
+    "stock": 1
+  },
+  {
+    "id": "bl-530421769",
+    "name": "Ultra Sonic Raider (9449)",
+    "unitAmount": 22000,
+    "stock": 1
+  },
+  {
+    "id": "75021",
+    "name": "Republic Gunship (75021)",
+    "unitAmount": 32000,
+    "stock": 1
+  },
+  {
+    "id": "bl-545876807",
+    "name": "Ultra Agents Mission HQ (70165)",
+    "unitAmount": 6000,
+    "stock": 1
+  },
+  {
+    "id": "bl-557910011",
+    "name": "MTT (75058)",
+    "unitAmount": 18000,
+    "stock": 1
+  },
+  {
+    "id": "bl-529424192",
+    "name": "City of Stiix (70732)",
+    "unitAmount": 33000,
+    "stock": 1
+  },
+  {
+    "id": "bl-508482381",
+    "name": "Kanan's Speeder Bike (75141)",
+    "unitAmount": 6000,
+    "stock": 1
+  },
+  {
+    "id": "bl-533113926",
+    "name": "Samurai X Cave Chaos (70596)",
+    "unitAmount": 40000,
+    "stock": 1
+  },
+  {
+    "id": "bl-531764988",
+    "name": "Jedi and Clone Troopers Battle Pack (75206)",
+    "unitAmount": 3500,
+    "stock": 1
+  },
+  {
+    "id": "bl-556123871",
+    "name": "The Upside Down (75810)",
+    "unitAmount": 35000,
+    "stock": 1
+  },
+  {
+    "id": "bl-508725695",
+    "name": "Clone Trooper, 327th Star Corps (Phase 2) - Black Head",
+    "unitAmount": 800,
+    "stock": 1
+  },
+  {
+    "id": "bl-529415420",
+    "name": "Jay (Airjitzu) - Possession",
+    "unitAmount": 3000,
+    "stock": 1
+  },
+  {
+    "id": "bl-529422327",
+    "name": "Clone Trooper Captain Rex, 501st Legion (Phase 1) - Dark Bluish Gray Visor, Pauldron, and Kama, Large Eyes",
+    "unitAmount": 7000,
+    "stock": 1
+  },
+  {
+    "id": "bl-530415734",
+    "name": "Kithaba (Klatooinian Skiff Guard) - Dark Tan Vest",
+    "unitAmount": 400,
+    "stock": 1
+  },
+  {
+    "id": "bl-530416554",
+    "name": "Obi-Wan Kenobi (Headset)",
+    "unitAmount": 400,
+    "stock": 1
+  },
+  {
+    "id": "bl-530418947",
+    "name": "Commando Droid Captain",
+    "unitAmount": 300,
+    "stock": 1
+  },
+  {
+    "id": "bl-530419550",
+    "name": "Darth Vader - Holiday Sweater",
+    "unitAmount": 1000,
+    "stock": 1
+  },
+  {
+    "id": "bl-530420161",
+    "name": "Darth Vader (Black Head)",
+    "unitAmount": 800,
+    "stock": 1
+  },
+  {
+    "id": "bl-530420233",
+    "name": "Obi-Wan Kenobi (Dark Tan Legs)",
+    "unitAmount": 400,
+    "stock": 1
+  },
+  {
+    "id": "bl-530420856",
+    "name": "Imperial Officer with Battle Armor (Captain / Commandant / Commander) - Chin Strap",
+    "unitAmount": 300,
+    "stock": 1
+  },
+  {
+    "id": "bl-530420959",
+    "name": "General Maximillian Veers - Chest Armor, Light Bluish Gray Helmet",
+    "unitAmount": 300,
+    "stock": 2
+  },
+  {
+    "id": "bl-530558390",
+    "name": "Luke Skywalker - Tatooine, Light Nougat, Long Hair, White Tunic, Tan Legs",
+    "unitAmount": 500,
+    "stock": 1
+  },
+  {
+    "id": "bl-536482399",
+    "name": "Mandalorian Death Watch Warrior",
+    "unitAmount": 300,
+    "stock": 5
+  },
+  {
+    "id": "bl-536483390",
+    "name": "Imperial Crew - Black Cap, Closed Mouth",
+    "unitAmount": 400,
+    "stock": 1
+  },
+  {
+    "id": "bl-536485349",
+    "name": "Clone Trooper V-wing Pilot (Phase 2) - Sand Blue Arms and Legs, White Head",
+    "unitAmount": 700,
+    "stock": 2
+  },
+  {
+    "id": "bl-536485413",
+    "name": "Clone Trooper Pilot (Phase 2) - Sand Blue Arms and Legs, Frown",
+    "unitAmount": 600,
+    "stock": 2
+  },
+  {
+    "id": "bl-536486854",
+    "name": "Super Battle Droid - Pearl Dark Gray, Wide Head",
+    "unitAmount": 120,
+    "stock": 6
+  },
+  {
+    "id": "bl-536487484",
+    "name": "Imperial Scout Trooper - Printed Black Head, Dark Bluish Gray Torso Print",
+    "unitAmount": 300,
+    "stock": 1
+  },
+  {
+    "id": "bl-536487955",
+    "name": "Obi-Wan Kenobi (Medium Nougat Legs)",
+    "unitAmount": 700,
+    "stock": 1
+  },
+  {
+    "id": "bl-536488045",
+    "name": "Rebel Fleet Trooper - Male, Vest with Pockets, Light Nougat Neck",
+    "unitAmount": 300,
+    "stock": 1
+  },
+  {
+    "id": "bl-536823793",
+    "name": "Clone Trooper Captain Rex, 501st Legion (Phase 2) - Blue Cloth Pauldron, Black Cloth Kama, Large Eyes",
+    "unitAmount": 10000,
+    "stock": 1
+  },
+  {
+    "id": "bl-537454510",
+    "name": "Darth Vader (White Pupils)",
+    "unitAmount": 400,
+    "stock": 1
+  },
+  {
+    "id": "bl-537454555",
+    "name": "Rebel Fleet Trooper - Male, Vest with Pockets, Light Nougat Neck",
+    "unitAmount": 300,
+    "stock": 1
+  },
+  {
+    "id": "bl-537455864",
+    "name": "Clone Trooper Commander (Phase 1) - Bright Light Orange Arms, Nougat Head",
+    "unitAmount": 250,
+    "stock": 1
+  },
+  {
+    "id": "bl-543184122",
+    "name": "Bart Simpson",
+    "unitAmount": 300,
+    "stock": 1
+  },
+  {
+    "id": "bl-543184819",
+    "name": "First Order Officer (Lieutenant / Captain)",
+    "unitAmount": 700,
+    "stock": 1
+  },
+  {
+    "id": "bl-543184881",
+    "name": "Zoey - Dark Turquoise Cape",
+    "unitAmount": 200,
+    "stock": 1
+  },
+  {
+    "id": "bl-543184956",
+    "name": "Nightmare King",
+    "unitAmount": 500,
+    "stock": 1
+  },
+  {
+    "id": "bl-543187766",
+    "name": "NI-L8 Protocol Droid",
+    "unitAmount": 300,
+    "stock": 1
+  },
+  {
+    "id": "bl-543188085",
+    "name": "Anakin Skywalker - Short Legs, Reddish Brown Aviator Cap",
+    "unitAmount": 300,
+    "stock": 1
+  },
+  {
+    "id": "bl-543343744",
+    "name": "Pythor Chumsworth - Purple with Lavender",
+    "unitAmount": 1500,
+    "stock": 1
+  },
+  {
+    "id": "bl-543344450",
+    "name": "Ewok - Holiday Outfit",
+    "unitAmount": 300,
+    "stock": 1
+  },
+  {
+    "id": "bl-543684091",
+    "name": "Cole - The LEGO Ninjago Movie, Arms with Cuffs",
+    "unitAmount": 250,
+    "stock": 1
+  },
+  {
+    "id": "bl-543684758",
+    "name": "Imperial Shuttle Pilot - Light Nougat Head with Headset, Imperial Officer Cap",
+    "unitAmount": 300,
+    "stock": 2
+  },
+  {
+    "id": "bl-543684798",
+    "name": "Imperial Gunner - Helmet with Silver Imperial Logo, Light Nougat Head, Open Mouth",
+    "unitAmount": 200,
+    "stock": 1
+  },
+  {
+    "id": "bl-543684873",
+    "name": "Hoth Rebel Trooper White Uniform (Frown)",
+    "unitAmount": 250,
+    "stock": 1
+  },
+  {
+    "id": "bl-543685433",
+    "name": "Rebel Pilot X-wing (Theron Nett)",
+    "unitAmount": 300,
+    "stock": 1
+  },
+  {
+    "id": "bl-543686097",
+    "name": "General Rieekan",
+    "unitAmount": 300,
+    "stock": 1
+  },
+  {
+    "id": "bl-543686140",
+    "name": "Crusty",
+    "unitAmount": 350,
+    "stock": 1
+  },
+  {
+    "id": "bl-543686751",
+    "name": "Mike the Spike",
+    "unitAmount": 200,
+    "stock": 1
+  },
+  {
+    "id": "bl-543687001",
+    "name": "Imperial TIE Fighter / Striker Pilot",
+    "unitAmount": 200,
+    "stock": 1
+  },
+  {
+    "id": "bl-543687135",
+    "name": "Battle Droid - Tan, Angled Arm and Straight Arm",
+    "unitAmount": 100,
+    "stock": 1
+  },
+  {
+    "id": "bl-543688562",
+    "name": "N-POP Girl, The LEGO Ninjago Movie (Minifigure Only without Stand and Accessories)",
+    "unitAmount": 200,
+    "stock": 1
+  },
+  {
+    "id": "bl-543979006",
+    "name": "Astromech Droid, R2-D2 - Flat Silver Head, Lavender Dots and Small Receptor",
+    "unitAmount": 100,
+    "stock": 1
+  },
+  {
+    "id": "bl-543979847",
+    "name": "Din Grogu / The Child / 'Baby Yoda'",
+    "unitAmount": 100,
+    "stock": 1
+  },
+  {
+    "id": "bl-543980136",
+    "name": "Jay - Legacy",
+    "unitAmount": 150,
+    "stock": 1
+  },
+  {
+    "id": "bl-543980368",
+    "name": "Kai - Legacy",
+    "unitAmount": 150,
+    "stock": 1
+  },
+  {
+    "id": "bl-545877405",
+    "name": "Aayla Secura - Large Eyes",
+    "unitAmount": 2000,
+    "stock": 1
+  },
+  {
+    "id": "bl-545877800",
+    "name": "Islander, Male with Quiver",
+    "unitAmount": 600,
+    "stock": 1
+  },
+  {
+    "id": "bl-545878010",
+    "name": "Pirate Blue Jacket, White Legs, Brown Pirate Triangle Hat",
+    "unitAmount": 200,
+    "stock": 1
+  },
+  {
+    "id": "bl-553723053",
+    "name": "Count Dooku - Light Bluish Gray Swept Back Hair, Reddish Brown Cape, Large Eyes",
+    "unitAmount": 1500,
+    "stock": 1
+  },
+  {
+    "id": "bl-553723088",
+    "name": "Geonosian Zombie - Dark Bluish Gray, with Wings",
+    "unitAmount": 700,
+    "stock": 2
+  },
+  {
+    "id": "bl-553723117",
+    "name": "Geonosian Warrior - Dark Tan, with Wings",
+    "unitAmount": 1000,
+    "stock": 1
+  },
+  {
+    "id": "bl-557844551",
+    "name": "Clone Shock Trooper, Coruscant Guard (Phase 2) - Black Head",
+    "unitAmount": 800,
+    "stock": 1
+  },
+  {
+    "id": "bl-557844699",
+    "name": "Clone Bomb Squad Trooper (Phase 1) - Large Eyes",
+    "unitAmount": 500,
+    "stock": 1
+  },
+  {
+    "id": "bl-557845301",
+    "name": "Mandalorian Super Commando - Large Sand Blue Eyes",
+    "unitAmount": 1200,
+    "stock": 1
+  }
+]

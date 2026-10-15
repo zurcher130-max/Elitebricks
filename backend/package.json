@@ -1,0 +1,15 @@
+{
+  "name": "elitebricks-checkout",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "catalog": "node scripts/build-catalog.mjs",
+    "test": "node --test test/*.test.mjs",
+    "dev": "npm run catalog && wrangler dev --local",
+    "deploy": "npm run catalog && wrangler deploy",
+    "check": "npm run catalog && wrangler deploy --dry-run --outdir /tmp/elitebricks-worker-build"
+  },
+  "devDependencies": {
+    "wrangler": "4.151.0"
+  }
+}

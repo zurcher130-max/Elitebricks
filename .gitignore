@@ -1,0 +1,8 @@
+backend/node_modules/
+backend/.wrangler/
+backend/.dev.vars
+backend/.dev.vars.*
+!backend/.dev.vars.example
+.env
+.env.*
+!.env.example

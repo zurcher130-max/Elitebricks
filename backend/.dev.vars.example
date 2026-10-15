@@ -1,0 +1,3 @@
+# Copy to .dev.vars for local TEST mode only. Never commit .dev.vars.
+STRIPE_SECRET_KEY=sk_test_REPLACE_LOCALLY
+STRIPE_WEBHOOK_SECRET=whsec_REPLACE_LOCALLY

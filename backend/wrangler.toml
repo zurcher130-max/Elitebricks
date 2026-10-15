@@ -1,0 +1,19 @@
+name = "elitebricks-checkout"
+main = "src/worker.js"
+compatibility_date = "2026-10-01"
+workers_dev = true
+
+[vars]
+SITE_ORIGIN = "https://zurcher130-max.github.io"
+SITE_BASE_URL = "https://zurcher130-max.github.io/Elitebricks/"
+PAYMENTS_ENABLED = "false"
+# Set the actual pickup address before allowing pickup payments.
+WAREHOUSE_ADDRESS = ""
+
+[[durable_objects.bindings]]
+name = "SHOP"
+class_name = "Shop"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["Shop"]
