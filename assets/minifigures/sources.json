@@ -1,0 +1,434 @@
+{
+  "sw1298": {
+    "image": "minifigures/sw1298.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw1298-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw1298/",
+    "name": "Ewok",
+    "width": 192,
+    "height": 277
+  },
+  "sw1146": {
+    "image": "minifigures/sw1146.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw1146-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw1146/",
+    "name": "Clone Trooper Commander",
+    "width": 227,
+    "height": 384
+  },
+  "sw1136": {
+    "image": "minifigures/sw1136.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw1136-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw1136/",
+    "name": "NI-L8 Protocol Droid",
+    "width": 242,
+    "height": 392
+  },
+  "sw1113": {
+    "image": "minifigures/sw1113.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw1113-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw1113/",
+    "name": "Din Grogu / The Child / 'Baby Yoda'",
+    "width": 298,
+    "height": 250
+  },
+  "sw0995": {
+    "image": "minifigures/sw0995.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw0995-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw0995/",
+    "name": "Rebel Fleet Trooper",
+    "width": 223,
+    "height": 386
+  },
+  "sw1121": {
+    "image": "minifigures/sw1121.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw1121-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw1121/",
+    "name": "Darth Vader",
+    "width": 294,
+    "height": 400
+  },
+  "sw1001": {
+    "image": "minifigures/sw1001.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw1001-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw1001/",
+    "name": "Anakin Skywalker",
+    "width": 277,
+    "height": 390
+  },
+  "sw0802": {
+    "image": "minifigures/sw0802.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw0802-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw0802/",
+    "name": "Imperial Shuttle Pilot",
+    "width": 233,
+    "height": 387
+  },
+  "sw0870": {
+    "image": "minifigures/sw0870.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw0870-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw0870/",
+    "name": "First Order Officer",
+    "width": 189,
+    "height": 314
+  },
+  "sw0693": {
+    "image": "minifigures/sw0693.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw0693-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw0693/",
+    "name": "Imperial Crew",
+    "width": 190,
+    "height": 312
+  },
+  "sw0708": {
+    "image": "minifigures/sw0708.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw0708-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw0708/",
+    "name": "Hoth Rebel Trooper White Uniform",
+    "width": 169,
+    "height": 308
+  },
+  "sw0704": {
+    "image": "minifigures/sw0704.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw0704-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw0704/",
+    "name": "Obi-Wan Kenobi",
+    "width": 190,
+    "height": 314
+  },
+  "sw0788": {
+    "image": "minifigures/sw0788.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw0788-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw0788/",
+    "name": "Imperial TIE Fighter / Striker Pilot",
+    "width": 179,
+    "height": 311
+  },
+  "sw0527a": {
+    "image": "minifigures/sw0527a.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw0527a-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw0527a/",
+    "name": "Astromech Droid",
+    "width": 232,
+    "height": 260
+  },
+  "sw0520": {
+    "image": "minifigures/sw0520.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw0520-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw0520/",
+    "name": "Imperial Gunner",
+    "width": 175,
+    "height": 299
+  },
+  "sw0449": {
+    "image": "minifigures/sw0449.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw0449-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw0449/",
+    "name": "Obi-Wan Kenobi",
+    "width": 177,
+    "height": 293
+  },
+  "sw0448": {
+    "image": "minifigures/sw0448.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw0448-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw0448/",
+    "name": "Commando Droid Captain",
+    "width": 115,
+    "height": 291
+  },
+  "sw0544": {
+    "image": "minifigures/sw0544.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw0544-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw0544/",
+    "name": "Rebel Pilot X-wing",
+    "width": 181,
+    "height": 302
+  },
+  "sw0494": {
+    "image": "minifigures/sw0494.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw0494-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw0494/",
+    "name": "Mandalorian Super Commando",
+    "width": 177,
+    "height": 299
+  },
+  "sw0450": {
+    "image": "minifigures/sw0450.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw0450-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw0450/",
+    "name": "Clone Trooper Captain Rex",
+    "width": 168,
+    "height": 310
+  },
+  "sw0460": {
+    "image": "minifigures/sw0460.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw0460-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw0460/",
+    "name": "General Rieekan",
+    "width": 178,
+    "height": 292
+  },
+  "sw0005b": {
+    "image": "minifigures/sw0005b.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw0005b-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw0005b/",
+    "name": "Imperial Scout Trooper",
+    "width": 239,
+    "height": 277
+  },
+  "sw0362": {
+    "image": "minifigures/sw0362.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw0362-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw0362/",
+    "name": "Obi-Wan Kenobi",
+    "width": 229,
+    "height": 377
+  },
+  "sw0381": {
+    "image": "minifigures/sw0381.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw0381-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw0381/",
+    "name": "Geonosian Warrior",
+    "width": 397,
+    "height": 250
+  },
+  "sw0382": {
+    "image": "minifigures/sw0382.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw0382-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw0382/",
+    "name": "Geonosian Zombie",
+    "width": 367,
+    "height": 244
+  },
+  "sw0397": {
+    "image": "minifigures/sw0397.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw0397-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw0397/",
+    "name": "Kithaba",
+    "width": 181,
+    "height": 306
+  },
+  "sw0426": {
+    "image": "minifigures/sw0426.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw0426-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw0426/",
+    "name": "Imperial Officer",
+    "width": 230,
+    "height": 390
+  },
+  "sw0296": {
+    "image": "minifigures/sw0296.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw0296-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw0296/",
+    "name": "Mandalorian Death Watch Warrior",
+    "width": 227,
+    "height": 387
+  },
+  "sw0266": {
+    "image": "minifigures/sw0266.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw0266-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw0266/",
+    "name": "Clone Trooper Pilot",
+    "width": 176,
+    "height": 292
+  },
+  "sw0299": {
+    "image": "minifigures/sw0299.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw0299-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw0299/",
+    "name": "Clone Bomb Squad Trooper",
+    "width": 221,
+    "height": 395
+  },
+  "sw0289": {
+    "image": "minifigures/sw0289.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw0289-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw0289/",
+    "name": "General Maximillian Veers",
+    "width": 232,
+    "height": 384
+  },
+  "sw0281": {
+    "image": "minifigures/sw0281.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw0281-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw0281/",
+    "name": "Clone Trooper V-wing Pilot",
+    "width": 236,
+    "height": 386
+  },
+  "sw0284": {
+    "image": "minifigures/sw0284.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw0284-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw0284/",
+    "name": "Aayla Secura",
+    "width": 196,
+    "height": 300
+  },
+  "sw0224": {
+    "image": "minifigures/sw0224.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw0224-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw0224/",
+    "name": "Count Dooku",
+    "width": 250,
+    "height": 325
+  },
+  "sw0277": {
+    "image": "minifigures/sw0277.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw0277-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw0277/",
+    "name": "Darth Vader",
+    "width": 283,
+    "height": 315
+  },
+  "sw0194": {
+    "image": "minifigures/sw0194.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw0194-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw0194/",
+    "name": "Clone Trooper Captain Rex",
+    "width": 236,
+    "height": 318
+  },
+  "sw0001c": {
+    "image": "minifigures/sw0001c.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw0001c-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw0001c/",
+    "name": "Battle Droid",
+    "width": 185,
+    "height": 315
+  },
+  "sw0092": {
+    "image": "minifigures/sw0092.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw0092-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw0092/",
+    "name": "Super Battle Droid",
+    "width": 155,
+    "height": 309
+  },
+  "sw0091": {
+    "image": "minifigures/sw0091.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw0091-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw0091/",
+    "name": "Clone Shock Trooper",
+    "width": 198,
+    "height": 342
+  },
+  "sw0128a": {
+    "image": "minifigures/sw0128a.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw0128a-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw0128a/",
+    "name": "Clone Trooper",
+    "width": 228,
+    "height": 398
+  },
+  "sw0176": {
+    "image": "minifigures/sw0176.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sw0176-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sw0176/",
+    "name": "Luke Skywalker",
+    "width": 141,
+    "height": 230
+  },
+  "njo0489": {
+    "image": "minifigures/njo0489.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/njo0489-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/njo0489/",
+    "name": "Jay",
+    "width": 237,
+    "height": 395
+  },
+  "njo0492": {
+    "image": "minifigures/njo0492.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/njo0492-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/njo0492/",
+    "name": "Kai",
+    "width": 234,
+    "height": 395
+  },
+  "njo0506": {
+    "image": "minifigures/njo0506.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/njo0506-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/njo0506/",
+    "name": "Pythor Chumsworth",
+    "width": 205,
+    "height": 299
+  },
+  "njo0379": {
+    "image": "minifigures/njo0379.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/njo0379-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/njo0379/",
+    "name": "Mike the Spike",
+    "width": 242,
+    "height": 395
+  },
+  "coltlnm20": {
+    "image": "minifigures/coltlnm20.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/coltlnm20-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/coltlnm20/",
+    "name": "N-POP Girl",
+    "width": 215,
+    "height": 378
+  },
+  "njo0322": {
+    "image": "minifigures/njo0322.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/njo0322-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/njo0322/",
+    "name": "Cole",
+    "width": 241,
+    "height": 396
+  },
+  "njo0369": {
+    "image": "minifigures/njo0369.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/njo0369-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/njo0369/",
+    "name": "Crusty",
+    "width": 138,
+    "height": 262
+  },
+  "njo0160": {
+    "image": "minifigures/njo0160.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/njo0160-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/njo0160/",
+    "name": "Jay",
+    "width": 238,
+    "height": 395
+  },
+  "pi079": {
+    "image": "minifigures/pi079.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/pi079-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/pi079/",
+    "name": "Islander",
+    "width": 163,
+    "height": 318
+  },
+  "pi009": {
+    "image": "minifigures/pi009.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/pi009-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/pi009/",
+    "name": "Pirate Blue Jacket",
+    "width": 193,
+    "height": 318
+  },
+  "drm009": {
+    "image": "minifigures/drm009.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/drm009-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/drm009/",
+    "name": "Zoey",
+    "width": 283,
+    "height": 393
+  },
+  "drm012": {
+    "image": "minifigures/drm012.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/drm012-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/drm012/",
+    "name": "Nightmare King",
+    "width": 258,
+    "height": 394
+  },
+  "sim026": {
+    "image": "minifigures/sim026.webp",
+    "source": "https://cdn.merlinssteine.de/minifigs/sim026-bl.webp?v=6",
+    "page": "https://www.merlinssteine.de/minifigs/sim026/",
+    "name": "Bart Simpson",
+    "width": 234,
+    "height": 371
+  }
+}

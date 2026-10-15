@@ -52,3 +52,7 @@ python3 tools/import_minifigures.py /pfad/zum/invcsv.csv
 ```
 
 Der CSV-Import ersetzt nur die Minifiguren und bewahrt die Sets samt Bildern. Artikelnummern, Preise, Stückzahlen und Originalbeschreibungen bleiben pro BrickLink-Lot erhalten; gleiche Figuren in unterschiedlichen Lots werden nicht zusammengefasst. Neu/Gebraucht ist der zusätzliche Figurenfilter, weil der CSV keine verlässlichen Zubehörfelder enthält. Fehlende Bilder erscheinen als Artikelnummer mit „Produktbild folgt“. LEGO-Suche und Bauanleitungsseiten liefern keine eindeutig zugeordneten Bilder für die BrickLink-Figurenkennungen.
+
+## Figurenbilder
+
+54 unterschiedliche Figurenbilder von Merlins Steine sind unter `assets/minifigures` lokal gespeichert und anhand exakter BrickLink-Artikelnummern zugeordnet. Damit haben 55 von 56 Figuren-Angeboten ein Bild (ein Artikel kommt in zwei Lots vor). `sw0386` fehlt dort und bleibt ohne Bild; keine ähnliche Variante wurde eingesetzt. `sources.json` enthält Quell-URLs und Zuordnung, der CSV-Importer erhält sie bei Aktualisierungen. Die Website nennt Merlins Steine als Quelle. Katalogbilder zeigen nicht den individuellen Zustand des angebotenen Exemplars.

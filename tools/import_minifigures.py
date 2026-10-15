@@ -15,6 +15,8 @@ def load_catalog():
 def import_figures(path):
  rows=list(csv.DictReader(path.open(encoding='utf-8-sig',newline='')))
  seen=set();figures=[]
+ manifest_path=ROOT/"assets/minifigures/sources.json"
+ images=json.loads(manifest_path.read_text()) if manifest_path.is_file() else {}
  for row in rows:
   if not row['Category'].startswith('Minifigures / '):raise ValueError('Non-minifigure row; refusing partial import')
   if row['Currency']!='CHF':raise ValueError('Expected CHF; no currency conversion')
@@ -36,9 +38,11 @@ def import_figures(path):
   notes=TRANSLATIONS.get(match.group(1).lower(),match.group(1)) if match else ''
   if row.get('Extended Description'):notes+=' '+html.unescape(row['Extended Description']).strip()
   if 'without Stand and Accessories' in name:notes+=' Ohne Standplatte und Zubehör.'
+  picture=images.get(number)
+  if picture and not (ROOT/'assets'/picture['image']).is_file():raise ValueError('Missing local minifigure image')
   figures.append(dict(id=f'bl-{lot}',name=name,shop='minifiguren',category=theme,theme=theme,
    label='NINJAGO' if theme=='ninjago' else theme_label,price=float(price),detail='new' if row['Condition']=='New' else 'used',
-   image=None,imageKind=None,meta=f'Figur {number}',description=notes.strip(),tag='',example=False,
+   image=picture["image"] if picture else None,imageKind="merlins-catalog" if picture else None,meta=f'Figur {number}',description=notes.strip(),tag='',example=False,
    quantity=quantity,condition='new' if row['Condition']=='New' else 'used',subcondition='',
    itemNumber=number,lotId=lot,sourceDescription=description,source='BrickLink CSV inventory export'))
  if not figures:raise ValueError('No active figures; refusing empty replacement')
