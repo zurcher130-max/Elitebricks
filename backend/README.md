@@ -1,6 +1,6 @@
 # Stripe Checkout – vorbereiteter Testbetrieb
 
-Die Website bleibt auf GitHub Pages. Der Cloudflare Worker erstellt Stripe Checkout in CHF; ein SQLite Durable Object speichert Bestellungen, Adressen, Reservierungen und Verkäufe transaktional. Live-Schlüssel werden absichtlich abgelehnt. Es wurde noch kein Cloudflare-Deployment und kein echter Stripe-Sandbox-Kauf durchgeführt.
+Die Website bleibt auf GitHub Pages. Der Cloudflare Worker erstellt Stripe Checkout in CHF; ein SQLite Durable Object speichert Bestellungen, Adressen, Reservierungen und Verkäufe transaktional. Live-Schlüssel werden absichtlich abgelehnt. Cloudflare wurde vom Nutzer bereitgestellt; der Testmodus ist in der Konfiguration aktiviert. Ein echter Stripe-Sandbox-Kauf wurde noch nicht bestätigt.
 
 ## Installation
 
@@ -17,11 +17,11 @@ npm run check
 
 ## Cloudflare und Stripe verbinden
 
-1. Mit dem vorgesehenen Cloudflare-Konto `npx wrangler login` ausführen und anschließend `npm run deploy`. `PAYMENTS_ENABLED` bleibt zunächst `false`. Workers und SQLite Durable Objects müssen im Konto verfügbar sein; Cloudflare zeigt etwaige Konto-/Tarifanforderungen an. Die ausgegebene HTTPS-Worker-Adresse notieren.
+1. Mit dem vorgesehenen Cloudflare-Konto `npx wrangler login` ausführen und anschließend `npm run deploy`. Bei einer vollständig neuen Einrichtung `PAYMENTS_ENABLED` zunächst auf `false` setzen. Workers und SQLite Durable Objects müssen im Konto verfügbar sein; Cloudflare zeigt etwaige Konto-/Tarifanforderungen an. Die ausgegebene HTTPS-Worker-Adresse notieren.
 2. Im Stripe-Testmodus bzw. einer Sandbox den geheimen Test-API-Schlüssel erstellen. Im Cloudflare-Dashboard unter Worker → Settings → Variables and Secrets sicher als **`STRIPE_SECRET_KEY`** eintragen (`sk_test_…`). Alternativ `npx wrangler secret put STRIPE_SECRET_KEY` interaktiv ausführen. Niemals Schlüssel in Code oder Chat kopieren.
 3. In Stripe einen Test-Webhook für `https://<worker>/webhook` anlegen. Ereignisse: `checkout.session.completed`, `checkout.session.expired`, `checkout.session.async_payment_succeeded`, `checkout.session.async_payment_failed`. Den Signaturschlüssel dieses Endpunkts sicher als **`STRIPE_WEBHOOK_SECRET`** (`whsec_…`) bei Cloudflare setzen. Ein lokaler Stripe-CLI-Webhook-Schlüssel ist nicht der Dashboard-Endpunkt-Schlüssel.
 4. Einen eigenständigen zufälligen Schlüssel mit mindestens 32 Zeichen als **`ADMIN_API_KEY`** bei Cloudflare hinterlegen. Er schützt den Händlerabruf und darf niemals im Website-Code stehen.
-5. Die tatsächliche `WAREHOUSE_ADDRESS` in `wrangler.toml` ergänzen. Ohne Adresse verweigert das Backend Online-Testzahlungen mit Lagerabholung; Standard und Priority funktionieren unabhängig davon.
+5. Die öffentliche `WAREHOUSE_ADDRESS` in `wrangler.toml` prüfen (aktuell Haltenstrasse 12, 8413 Neftenbach). Ohne Adresse verweigert das Backend Online-Testzahlungen mit Lagerabholung; Standard und Priority funktionieren unabhängig davon.
 6. `PAYMENTS_ENABLED = "true"` in `wrangler.toml` setzen und erneut deployen. `SITE_ORIGIN` und `SITE_BASE_URL` passen zur aktuellen GitHub-Pages-Adresse; bei eigener Domain beide ändern.
 7. In `../payments-config.js` die echte Worker-HTTPS-Adresse als `apiBase` setzen und `enabled:true` aktivieren. Diese Datei enthält nur öffentliche Einstellungen, keine Stripe-Schlüssel. Auf GitHub veröffentlichen.
 

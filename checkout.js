@@ -12,6 +12,7 @@ let reviewedText = '';
 let reviewedOrder = null;
 let paymentPending = false;
 const paymentConfig = window.ELITEBRICKS_PAYMENTS;
+const warehouseAddress = paymentConfig?.warehouseAddress || '';
 const paymentsReady = paymentConfig?.enabled === true && /^https:\/\//.test(paymentConfig.apiBase || '');
 function readCart() {
   cart = {};
@@ -57,6 +58,7 @@ function shippingChanged() {
   const pickup = form.elements.shipping.value === 'warehouse';
   document.querySelector('#delivery-address').hidden = pickup;
   document.querySelector('#pickup-note').hidden = !pickup;
+  document.querySelector('#pickup-note').textContent = warehouseAddress ? `Lagerabholung nach Terminvereinbarung: ${warehouseAddress}.` : 'Die Lageradresse und ein Abholtermin werden vor einer verbindlichen Bestellung ergänzt.';
   for (const name of ['street','postalCode','city']) form.elements[name].required = !pickup;
   // Hidden delivery fields should not block pickup validation.
   for (const field of document.querySelectorAll('#delivery-address input, #delivery-address select')) field.disabled = pickup;
@@ -82,7 +84,7 @@ form.addEventListener('submit', event => {
   }
   const t = totals();
   const contact = `${values.firstName.trim()} ${values.lastName.trim()}\n${values.email.trim()}${values.phone ? '\n'+values.phone : ''}`;
-  const address = values.shipping === 'warehouse' ? 'Lagerabholung nach Terminvereinbarung. Adresse und Termin folgen vor Bestellfreigabe.' : [values.company,values.street,`${values.postalCode} ${values.city}`,'Schweiz'].filter(Boolean).join('\n');
+  const address = values.shipping === 'warehouse' ? (warehouseAddress ? `Lagerabholung nach Terminvereinbarung: ${warehouseAddress}` : 'Lagerabholung nach Terminvereinbarung. Adresse und Termin folgen vor Bestellfreigabe.') : [values.company,values.street,`${values.postalCode} ${values.city}`,'Schweiz'].filter(Boolean).join('\n');
   const lines = products.filter(p=>cart[p.id]).map(p=>`${cart[p.id]} × ${p.name}: ${money(Math.round(p.price*100)*cart[p.id])}`);
   reviewedText = ['ELITE BRICKS – ZUSAMMENFASSUNG (NICHT ABGESENDET)','',...lines,'',`Zwischensumme: ${money(t.subtotal)}`,`${selectedShipping().label}: ${money(t.shipping)}`,`Gesamt: ${money(t.total)}`,'','Kontakt:',contact,'',values.shipping === 'warehouse' ? 'Abholung:' : 'Lieferadresse:',address,values.notes ? '\nAnmerkungen:\n'+values.notes : '','\nEs wurde keine Bestellung übermittelt und keine Zahlung ausgelöst.'].join('\n');
   document.querySelector('#review-content').innerHTML = `<h3>Kontakt</h3><p>${escapeHTML(contact).replace(/\n/g,'<br>')}</p><h3>${values.shipping === 'warehouse' ? 'Abholung' : 'Lieferadresse'}</h3><p>${escapeHTML(address).replace(/\n/g,'<br>')}</p><h3>Deine Auswahl</h3><ul>${lines.map(line=>`<li>${escapeHTML(line)}</li>`).join('')}</ul><p>${escapeHTML(selectedShipping().label)}: ${money(t.shipping)}</p><p><strong>Gesamtbetrag: ${money(t.total)}</strong></p>${values.notes ? `<h3>Anmerkungen</h3><p>${escapeHTML(values.notes)}</p>` : ''}`;

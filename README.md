@@ -69,4 +69,6 @@ Bild und Name jeder Produktkarte führen zu `produkt.html?id=<Lot-ID>` (z. B. `p
 
 ## Stripe-Testbetrieb (vorbereitet)
 
-`backend/` enthält den Cloudflare Worker mit Bestell- und Reservierungsspeicherung und signaturgeprüften Stripe-Webhooks. Installation, sichere Secret-Eingabe, Deployment und ausstehender echter Sandbox-Test: [backend/README.md](backend/README.md). `payments-config.js` hält die Website standardmäßig im bisherigen Vorschau-Modus; geheime Schlüssel sind dort verboten. Der Testzahlungsbutton wird erst nach Einrichtung sichtbar. Live-Schlüssel werden derzeit abgelehnt.
+`backend/` enthält den Cloudflare Worker mit Bestell- und Reservierungsspeicherung und signaturgeprüften Stripe-Webhooks. Installation, sichere Secret-Eingabe, Deployment und ausstehender echter Sandbox-Test: [backend/README.md](backend/README.md). `payments-config.js` ist auf die bereitgestellte Cloudflare-Adresse und Testzahlungen eingestellt; geheime Schlüssel sind dort verboten. Ein echter Stripe-Sandbox-Kauf ist noch zu bestätigen. Live-Schlüssel werden derzeit abgelehnt.
+
+Öffentliche Lagerabholung: Haltenstrasse 12, 8413 Neftenbach, kostenlos nach Terminvereinbarung.

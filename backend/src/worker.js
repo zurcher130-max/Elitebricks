@@ -35,7 +35,7 @@ export function validateOrder(input,env){
     customer.company=clean(c.company,120);customer.street=clean(c.street,160,true);customer.postalCode=clean(c.postalCode,4,true);customer.city=clean(c.city,100,true);customer.country=clean(c.country,2,true);
     if(!/^\d{4}$/.test(customer.postalCode)||customer.country!=='CH')throw new CheckoutError('Versand ist aktuell nur an Schweizer Adressen möglich.');
   }
-  return {items,customer,shipping:input.shipping,shippingAmount:method.amount,total:items.reduce((n,p)=>n+p.unitAmount*p.quantity,0)+method.amount,currency:'chf'};
+  return {items,customer,shipping:input.shipping,...(input.shipping==='warehouse'?{pickupAddress:env.WAREHOUSE_ADDRESS.trim()}:{}),shippingAmount:method.amount,total:items.reduce((n,p)=>n+p.unitAmount*p.quantity,0)+method.amount,currency:'chf'};
 }
 async function fingerprint(value){return [...new Uint8Array(await crypto.subtle.digest('SHA-256',encoder.encode(JSON.stringify(value))))].map(x=>x.toString(16).padStart(2,'0')).join('');}
 export async function verifyStripeSignature(body,header,secret,now=Date.now()){
@@ -56,6 +56,7 @@ async function stripeSession(order,env){
   const success=new URL('zahlung.html',base);success.searchParams.set('order',order.id);success.searchParams.set('access',order.access);
   const cancel=new URL('warenkorb.html',base);cancel.searchParams.set('payment','cancelled');
   const params=new URLSearchParams({mode:'payment',currency:'chf',customer_email:order.customer.email,success_url:success.href,cancel_url:cancel.href,client_reference_id:order.id,'metadata[order_id]':order.id,'payment_intent_data[metadata][order_id]':order.id,'payment_method_types[0]':'card',expires_at:String(Math.floor(order.createdAt/1000)+1860),'shipping_options[0][shipping_rate_data][type]':'fixed_amount','shipping_options[0][shipping_rate_data][fixed_amount][amount]':String(order.shippingAmount),'shipping_options[0][shipping_rate_data][fixed_amount][currency]':'chf','shipping_options[0][shipping_rate_data][display_name]':shipping[order.shipping].label});
+  if(order.shipping==='warehouse')params.set('custom_text[submit][message]',`Lagerabholung nach Terminvereinbarung: ${order.pickupAddress}`);
   order.items.forEach((p,i)=>{
     params.set(`line_items[${i}][price_data][currency]`,'chf');params.set(`line_items[${i}][price_data][unit_amount]`,String(p.unitAmount));params.set(`line_items[${i}][price_data][product_data][name]`,p.name);params.set(`line_items[${i}][quantity]`,String(p.quantity));
   });

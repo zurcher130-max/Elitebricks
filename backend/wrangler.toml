@@ -7,8 +7,8 @@ workers_dev = true
 SITE_ORIGIN = "https://zurcher130-max.github.io"
 SITE_BASE_URL = "https://zurcher130-max.github.io/Elitebricks/"
 PAYMENTS_ENABLED = "true"
-# Set the actual pickup address before allowing pickup payments.
-WAREHOUSE_ADDRESS = ""
+# Public pickup address, after arranging an appointment.
+WAREHOUSE_ADDRESS = "Haltenstrasse 12, 8413 Neftenbach"
 
 [[durable_objects.bindings]]
 name = "SHOP"
